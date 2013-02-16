@@ -2,6 +2,17 @@
 
 The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
 
+## SWG Notes
+
+Create post: 
+rake post title="Hello World"
+
+Create pages:
+rake page name="about.md"
+rake page name="pages/about.md"
+rake page name="pages/about" # pretty url
+
+
 ## Usage
 
 For all usage and documentation please see: <http://jekyllbootstrap.com>
