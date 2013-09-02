@@ -1,16 +1,9 @@
----
-layout: page
-title: Main
-tagline: 
----
-{% include JB/setup %}
+
+
     
-## Posts
+# Steven Githens
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+I'm a software developer with my current homebase in Indianapolis.
 
+[Resume (slightly out of date)](./StevenWGithensResume.pdf)
 
