@@ -1,0 +1,4220 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://codemirror.net/lib/codemirror.css">
+<script src="http://codemirror.net/lib/codemirror.js"></script>
+<script src="http://codemirror.net/addon/runmode/runmode.js"></script>
+<script src="http://codemirror.net/mode/javascript/javascript.js"></script>
+</head>
+<body>
+Fluid Doc
+<a name="top"></a>
+
+<ul>
+<li><a href="#defaults-listing">Defaults Block List</a></li>
+<li><a href="#function-listing">Function List</a></li>
+<li><a href="#non-api-function-listing">Internal Non-API Function List</a></li>
+</ul>
+
+<h2><a name="defaults-listing">Defaults Blocks</a></h2>
+<ul>
+
+<li><a href="#fluid.eventedComponent">fluid.eventedComponent</a></li>
+
+<li><a href="#fluid.function">fluid.function</a></li>
+
+<li><a href="#fluid.littleComponent">fluid.littleComponent</a></li>
+
+<li><a href="#fluid.messageResolver">fluid.messageResolver</a></li>
+
+<li><a href="#fluid.modelComponent">fluid.modelComponent</a></li>
+
+<li><a href="#"></a></li>
+
+</ul>
+<h2><a name="function-listing">Functions</a></h2>
+<ul>
+
+<li><a href="#fluid.accumulate">fluid.accumulate</a></li>
+
+<li><a href="#fluid.allocateGuid">fluid.allocateGuid</a></li>
+
+<li><a href="#fluid.annotateListeners">fluid.annotateListeners</a></li>
+
+<li><a href="#fluid.arrayConcatPolicy">fluid.arrayConcatPolicy</a></li>
+
+<li><a href="#fluid.arrayToHash">fluid.arrayToHash</a></li>
+
+<li><a href="#fluid.bind">fluid.bind</a></li>
+
+<li><a href="#fluid.builtinFail">fluid.builtinFail</a></li>
+
+<li><a href="#fluid.censorKeys">fluid.censorKeys</a></li>
+
+<li><a href="#fluid.clear">fluid.clear</a></li>
+
+<li><a href="#fluid.compareStringLength">fluid.compareStringLength</a></li>
+
+<li><a href="#fluid.computeNickName">fluid.computeNickName</a></li>
+
+<li><a href="#fluid.concreteTrundler">fluid.concreteTrundler</a></li>
+
+<li><a href="#fluid.contains">fluid.contains</a></li>
+
+<li><a href="#fluid.copy">fluid.copy</a></li>
+
+<li><a href="#fluid.decodeAccessorArg">fluid.decodeAccessorArg</a></li>
+
+<li><a href="#fluid.defaults">fluid.defaults</a></li>
+
+<li><a href="#fluid.destroyValue">fluid.destroyValue</a></li>
+
+<li><a href="#fluid.doIndexDefaults">fluid.doIndexDefaults</a></li>
+
+<li><a href="#fluid.doLog">fluid.doLog</a></li>
+
+<li><a href="#fluid.driveStrategy">fluid.driveStrategy</a></li>
+
+<li><a href="#fluid.each">fluid.each</a></li>
+
+<li><a href="#fluid.emptySubcomponent">fluid.emptySubcomponent</a></li>
+
+<li><a href="#fluid.event.identifyListener">fluid.event.identifyListener</a></li>
+
+<li><a href="#fluid.event.nameEvent">fluid.event.nameEvent</a></li>
+
+<li><a href="#fluid.expect">fluid.expect</a></li>
+
+<li><a href="#fluid.fail">fluid.fail</a></li>
+
+<li><a href="#fluid.filterKeys">fluid.filterKeys</a></li>
+
+<li><a href="#fluid.fireEvent">fluid.fireEvent</a></li>
+
+<li><a href="#fluid.freshContainer">fluid.freshContainer</a></li>
+
+<li><a href="#fluid.generate">fluid.generate</a></li>
+
+<li><a href="#fluid.generateUniquePrefix">fluid.generateUniquePrefix</a></li>
+
+<li><a href="#fluid.get">fluid.get</a></li>
+
+<li><a href="#fluid.getGlobalValue">fluid.getGlobalValue</a></li>
+
+<li><a href="#fluid.getMembers">fluid.getMembers</a></li>
+
+<li><a href="#fluid.hasGrade">fluid.hasGrade</a></li>
+
+<li><a href="#fluid.identity">fluid.identity</a></li>
+
+<li><a href="#fluid.indexDefaults">fluid.indexDefaults</a></li>
+
+<li><a href="#fluid.initLittleComponent">fluid.initLittleComponent</a></li>
+
+<li><a href="#fluid.initSubcomponent">fluid.initSubcomponent</a></li>
+
+<li><a href="#fluid.initSubcomponents">fluid.initSubcomponents</a></li>
+
+<li><a href="#fluid.invokeGlobalFunction">fluid.invokeGlobalFunction</a></li>
+
+<li><a href="#fluid.iota">fluid.iota</a></li>
+
+<li><a href="#fluid.isArrayable">fluid.isArrayable</a></li>
+
+<li><a href="#fluid.isDOMNode">fluid.isDOMNode</a></li>
+
+<li><a href="#fluid.isDOMish">fluid.isDOMish</a></li>
+
+<li><a href="#fluid.isLogLevel">fluid.isLogLevel</a></li>
+
+<li><a href="#fluid.isLogging">fluid.isLogging</a></li>
+
+<li><a href="#fluid.isMarker">fluid.isMarker</a></li>
+
+<li><a href="#fluid.isPlainObject">fluid.isPlainObject</a></li>
+
+<li><a href="#fluid.isPrimitive">fluid.isPrimitive</a></li>
+
+<li><a href="#fluid.isValue">fluid.isValue</a></li>
+
+<li><a href="#fluid.keyForValue">fluid.keyForValue</a></li>
+
+<li><a href="#fluid.log">fluid.log</a></li>
+
+<li><a href="#fluid.logActivity">fluid.logActivity</a></li>
+
+<li><a href="#fluid.makeArray">fluid.makeArray</a></li>
+
+<li><a href="#fluid.makeComponent">fluid.makeComponent</a></li>
+
+<li><a href="#fluid.makeComponents">fluid.makeComponents</a></li>
+
+<li><a href="#fluid.makeEventFirer">fluid.makeEventFirer</a></li>
+
+<li><a href="#fluid.makeFlatten">fluid.makeFlatten</a></li>
+
+<li><a href="#fluid.make_find">fluid.make_find</a></li>
+
+<li><a href="#fluid.merge">fluid.merge</a></li>
+
+<li><a href="#fluid.mergeListenerPolicy">fluid.mergeListenerPolicy</a></li>
+
+<li><a href="#fluid.mergeListenersPolicy">fluid.mergeListenersPolicy</a></li>
+
+<li><a href="#fluid.messageLocator">fluid.messageLocator</a></li>
+
+<li><a href="#fluid.messageResolver.preInit">fluid.messageResolver.preInit</a></li>
+
+<li><a href="#fluid.model.accessImpl">fluid.model.accessImpl</a></li>
+
+<li><a href="#fluid.model.composePath">fluid.model.composePath</a></li>
+
+<li><a href="#fluid.model.composeSegments">fluid.model.composeSegments</a></li>
+
+<li><a href="#fluid.model.copyModel">fluid.model.copyModel</a></li>
+
+<li><a href="#fluid.model.getSimple">fluid.model.getSimple</a></li>
+
+<li><a href="#fluid.model.mergeModel">fluid.model.mergeModel</a></li>
+
+<li><a href="#fluid.model.parseEL">fluid.model.parseEL</a></li>
+
+<li><a href="#fluid.model.setSimple">fluid.model.setSimple</a></li>
+
+<li><a href="#fluid.nameComponent">fluid.nameComponent</a></li>
+
+<li><a href="#fluid.passLogLevel">fluid.passLogLevel</a></li>
+
+<li><a href="#fluid.popActivity">fluid.popActivity</a></li>
+
+<li><a href="#fluid.popLogging">fluid.popLogging</a></li>
+
+<li><a href="#fluid.preInitModelComponent">fluid.preInitModelComponent</a></li>
+
+<li><a href="#fluid.pushSoftFailure">fluid.pushSoftFailure</a></li>
+
+<li><a href="#fluid.registerGlobalFunction">fluid.registerGlobalFunction</a></li>
+
+<li><a href="#fluid.registerNamespace">fluid.registerNamespace</a></li>
+
+<li><a href="#fluid.remove_if">fluid.remove_if</a></li>
+
+<li><a href="#fluid.set">fluid.set</a></li>
+
+<li><a href="#fluid.setLogging">fluid.setLogging</a></li>
+
+<li><a href="#fluid.stringTemplate">fluid.stringTemplate</a></li>
+
+<li><a href="#fluid.stringToRegExp">fluid.stringToRegExp</a></li>
+
+<li><a href="#fluid.transform">fluid.transform</a></li>
+
+<li><a href="#fluid.tryCatch">fluid.tryCatch</a></li>
+
+<li><a href="#fluid.typeFount">fluid.typeFount</a></li>
+
+<li><a href="#fluid.typeTag">fluid.typeTag</a></li>
+
+<li><a href="#fluid.unique">fluid.unique</a></li>
+
+<li><a href="#mergeOptions.destroyValue">mergeOptions.destroyValue</a></li>
+
+<li><a href="#options.initter">options.initter</a></li>
+
+<li><a href="#that.addListener">that.addListener</a></li>
+
+<li><a href="#that.lookup">that.lookup</a></li>
+
+<li><a href="#that.resolve">that.resolve</a></li>
+
+</ul>
+<h2><a name="non-api-function-listing">Non API Functions</a></h2>
+<ul>
+
+<li><a href="#fluid.FluidError">fluid.FluidError</a></li>
+
+<li><a href="#fluid.clearLifecycleFunctions">fluid.clearLifecycleFunctions</a></li>
+
+<li><a href="#fluid.compileMergePolicy">fluid.compileMergePolicy</a></li>
+
+<li><a href="#fluid.derefMergePolicy">fluid.derefMergePolicy</a></li>
+
+<li><a href="#fluid.event.addListenerToFirer">fluid.event.addListenerToFirer</a></li>
+
+<li><a href="#fluid.event.impersonateListener">fluid.event.impersonateListener</a></li>
+
+<li><a href="#fluid.event.mapPriority">fluid.event.mapPriority</a></li>
+
+<li><a href="#fluid.event.resolveListener">fluid.event.resolveListener</a></li>
+
+<li><a href="#fluid.event.resolveListenerRecord">fluid.event.resolveListenerRecord</a></li>
+
+<li><a href="#fluid.event.sortListeners">fluid.event.sortListeners</a></li>
+
+<li><a href="#fluid.eventFromRecord">fluid.eventFromRecord</a></li>
+
+<li><a href="#fluid.fetchMergeChildren">fluid.fetchMergeChildren</a></li>
+
+<li><a href="#fluid.findMergeBlocks">fluid.findMergeBlocks</a></li>
+
+<li><a href="#fluid.getActivityStack">fluid.getActivityStack</a></li>
+
+<li><a href="#fluid.getGradedDefaults">fluid.getGradedDefaults</a></li>
+
+<li><a href="#fluid.gradeNamesToKey">fluid.gradeNamesToKey</a></li>
+
+<li><a href="#fluid.initComponent">fluid.initComponent</a></li>
+
+<li><a href="#fluid.initLifecycleFunctions">fluid.initLifecycleFunctions</a></li>
+
+<li><a href="#fluid.initSubcomponentImpl">fluid.initSubcomponentImpl</a></li>
+
+<li><a href="#fluid.instantiateFirers">fluid.instantiateFirers</a></li>
+
+<li><a href="#fluid.isDefaultValueMergePolicy">fluid.isDefaultValueMergePolicy</a></li>
+
+<li><a href="#fluid.makeMergeOptions">fluid.makeMergeOptions</a></li>
+
+<li><a href="#fluid.makeMergeStrategy">fluid.makeMergeStrategy</a></li>
+
+<li><a href="#fluid.makeRootDestroy">fluid.makeRootDestroy</a></li>
+
+<li><a href="#fluid.mergeComponentOptions">fluid.mergeComponentOptions</a></li>
+
+<li><a href="#fluid.mergeListeners">fluid.mergeListeners</a></li>
+
+<li><a href="#fluid.mergeOneImpl">fluid.mergeOneImpl</a></li>
+
+<li><a href="#fluid.messageResolver.resolveOne">fluid.messageResolver.resolveOne</a></li>
+
+<li><a href="#fluid.model.accessSimple">fluid.model.accessSimple</a></li>
+
+<li><a href="#fluid.model.pathToSegments">fluid.model.pathToSegments</a></li>
+
+<li><a href="#fluid.model.resolvePathSegment">fluid.model.resolvePathSegment</a></li>
+
+<li><a href="#fluid.model.traverseSimple">fluid.model.traverseSimple</a></li>
+
+<li><a href="#fluid.parseSelector">fluid.parseSelector</a></li>
+
+<li><a href="#fluid.priorityComparator">fluid.priorityComparator</a></li>
+
+<li><a href="#fluid.pushActivity">fluid.pushActivity</a></li>
+
+<li><a href="#fluid.rawDefaults">fluid.rawDefaults</a></li>
+
+<li><a href="#fluid.renderActivity">fluid.renderActivity</a></li>
+
+<li><a href="#fluid.renderOneActivity">fluid.renderOneActivity</a></li>
+
+<li><a href="#fluid.requireDataBinding">fluid.requireDataBinding</a></li>
+
+<li><a href="#fluid.resolveGrade">fluid.resolveGrade</a></li>
+
+<li><a href="#fluid.resolveGradeStructure">fluid.resolveGradeStructure</a></li>
+
+<li><a href="#fluid.simpleGingerBlock">fluid.simpleGingerBlock</a></li>
+
+<li><a href="#fluid.singleThreadLocal">fluid.singleThreadLocal</a></li>
+
+<li><a href="#fluid.transformOptions">fluid.transformOptions</a></li>
+
+<li><a href="#fluid.transformOptionsBlocks">fluid.transformOptionsBlocks</a></li>
+
+<li><a href="#fluid.updateWithDefaultLifecycle">fluid.updateWithDefaultLifecycle</a></li>
+
+</ul>
+
+
+<h3><a name="fluid.eventedComponent">fluid.eventedComponent</a></h3>
+<ul>
+<li>Type: fluid defaults</li>
+<li>File: Fluid.js:1995</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1995">    fluid.defaults("fluid.eventedComponent", {
+        gradeNames: ["fluid.littleComponent", "autoInit"],
+        events: { // Four standard lifecycle points common to all components
+            onCreate:  null,
+            onAttach:  null, // events other than onCreate are only fired for IoC-configured components
+            onClear:   null,
+            onDestroy: null
+        },
+        mergePolicy: {
+            listeners: fluid.mergeListenersPolicy
+        }
+    });
+</textarea>
+<pre id="source-1995" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1995").value,
+    "application/javascript", document.getElementById("source-1995"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.function">fluid.function</a></h3>
+<ul>
+<li>Type: fluid defaults</li>
+<li>File: Fluid.js:1969</li>
+</ul>
+<p><pre> The base system grade definitions</pre></p>
+<textarea style="display:none;" id="hidden-source-1969">    fluid.defaults("fluid.function", {});
+</textarea>
+<pre id="source-1969" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1969").value,
+    "application/javascript", document.getElementById("source-1969"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.littleComponent">fluid.littleComponent</a></h3>
+<ul>
+<li>Type: fluid defaults</li>
+<li>File: Fluid.js:1986</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1986">    fluid.defaults("fluid.littleComponent", {
+        gradeNames: ["autoInit"],
+        initFunction: "fluid.initLittleComponent",
+        mergePolicy: fluid.rootMergePolicy,
+        argumentMap: {
+            options: 0
+        }
+    });
+</textarea>
+<pre id="source-1986" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1986").value,
+    "application/javascript", document.getElementById("source-1986"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.messageResolver">fluid.messageResolver</a></h3>
+<ul>
+<li>Type: fluid defaults</li>
+<li>File: Fluid.js:2382</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-2382">    fluid.defaults("fluid.messageResolver", {
+        gradeNames: ["fluid.littleComponent", "autoInit"],
+        mergePolicy: {
+            messageBase: "nomerge",
+            parents: "nomerge"
+        },
+        resolveFunc: fluid.stringTemplate,
+        parseFunc: fluid.identity,
+        messageBase: {},
+        parents: []
+    });
+</textarea>
+<pre id="source-2382" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2382").value,
+    "application/javascript", document.getElementById("source-2382"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.modelComponent">fluid.modelComponent</a></h3>
+<ul>
+<li>Type: fluid defaults</li>
+<li>File: Fluid.js:2014</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-2014">    fluid.defaults("fluid.modelComponent", {
+        gradeNames: ["fluid.littleComponent", "autoInit"],
+        preInitFunction: {
+            namespace: "preInitModelComponent",
+            listener: "fluid.preInitModelComponent"
+        },
+        mergePolicy: {
+            model: "preserve",
+            applier: "nomerge"
+        }
+    });
+</textarea>
+<pre id="source-2014" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2014").value,
+    "application/javascript", document.getElementById("source-2014"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name=""></a></h3>
+<ul>
+<li>Type: fluid defaults</li>
+<li>File: Fluid.js:1528</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1528">            fluid.defaults(key, options);
+</textarea>
+<pre id="source-1528" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1528").value,
+    "application/javascript", document.getElementById("source-1528"));
+</script>
+<a href="#top">back to top</a>
+
+
+
+<h3><a name="fluid.accumulate">fluid.accumulate</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:506</li>
+</ul>
+<p><pre> Scan through a list of objects, "accumulating" a value over them
+ (may be a straightforward "sum" or some other chained computation). "accumulate" is the name derived
+ from the C++ STL, other names for this algorithm are "reduce" or "fold".
+ @param list {Array} The list of objects to be accumulated over.
+ @param fn {Function} An "accumulation function" accepting the signature (object, total, index) where
+ object is the list member, total is the "running total" object (which is the return value from the previous function),
+ and index is the index number.
+ @param arg {Object} The initial value for the "running total" object.
+ @return {Object} the final running total object as returned from the final invocation of the function on the last list member.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-506">    fluid.accumulate = function (list, fn, arg) {
+        for (var i = 0; i < list.length; ++i) {
+            arg = fn(list[i], arg, i);
+        }
+        return arg;
+    };
+</textarea>
+<pre id="source-506" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-506").value,
+    "application/javascript", document.getElementById("source-506"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.allocateGuid">fluid.allocateGuid</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:978</li>
+</ul>
+<p><pre> Allocate an string value that will be very likely unique within this Fluid scope (frame or process)</pre></p>
+<textarea style="display:none;" id="hidden-source-978">    fluid.allocateGuid = function () {
+        return fluid_prefix + (fluid_guid++);
+    };
+</textarea>
+<pre id="source-978" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-978").value,
+    "application/javascript", document.getElementById("source-978"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.annotateListeners">fluid.annotateListeners</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1429</li>
+</ul>
+<p><pre> TODO: This function really needs to act recursively in order to catch listeners registered for subcomponents    </pre></p>
+<textarea style="display:none;" id="hidden-source-1429">    fluid.annotateListeners = function (componentName, options) {
+        if (options.listeners) {
+            options.listeners = fluid.transform(options.listeners, function (record) {
+                var togo = fluid.makeArray(record);
+                return fluid.transform(togo, function (onerec) {
+                    onerec.componentSource = componentName;
+                    return onerec;
+                });
+            });
+        }
+    };
+</textarea>
+<pre id="source-1429" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1429").value,
+    "application/javascript", document.getElementById("source-1429"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.arrayConcatPolicy">fluid.arrayConcatPolicy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1277</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1277">    fluid.arrayConcatPolicy = function (target, source) {
+        return fluid.makeArray(target).concat(fluid.makeArray(source));
+    };
+</textarea>
+<pre id="source-1277" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1277").value,
+    "application/javascript", document.getElementById("source-1277"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.arrayToHash">fluid.arrayToHash</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:663</li>
+</ul>
+<p><pre> Converts an array into an object whose keys are the elements of the array, each with the value "true"
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-663">    fluid.arrayToHash = function (array) {
+        var togo = {};
+        fluid.each(array, function (el) {
+            togo[el] = true;
+        });
+        return togo;
+    };
+</textarea>
+<pre id="source-663" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-663").value,
+    "application/javascript", document.getElementById("source-663"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.bind">fluid.bind</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:917</li>
+</ul>
+<p><pre>
+ Allows for the binding to a "this-ist" function
+ @param {Object} obj, "this-ist" object to bind to
+ @param {Object} fnName, the name of the function to call
+ @param {Object} args, arguments to call the function with
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-917">    fluid.bind = function (obj, fnName, args) {
+        return obj[fnName].apply(obj, fluid.makeArray(args));
+    };
+</textarea>
+<pre id="source-917" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-917").value,
+    "application/javascript", document.getElementById("source-917"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.builtinFail">fluid.builtinFail</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:150</li>
+</ul>
+<p><pre> defer to it</pre></p>
+<textarea style="display:none;" id="hidden-source-150">    fluid.builtinFail = function (soft, args, activity) {
+        fluid.log.apply(null, [fluid.logLevel.FAIL, "ASSERTION FAILED: "].concat(args));
+        fluid.logActivity(activity);
+        var message = args.join("");
+        if (soft) {
+            throw new fluid.FluidError(message);
+        } else {
+            message["Assertion failure - check console for details"](); // Intentionally cause a browser error by invoking a nonexistent function.
+        }
+    };
+</textarea>
+<pre id="source-150" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-150").value,
+    "application/javascript", document.getElementById("source-150"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.censorKeys">fluid.censorKeys</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:606</li>
+</ul>
+<p><pre> A convenience wrapper for <code>fluid.filterKeys</code> with the parameter <code>exclude</code> set to <code>true</code>
+  Returns the supplied object with listed keys removed </pre></p>
+<textarea style="display:none;" id="hidden-source-606">    fluid.censorKeys = function (toCensor, keys) {
+        return fluid.filterKeys(toCensor, keys, true);
+    };
+</textarea>
+<pre id="source-606" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-606").value,
+    "application/javascript", document.getElementById("source-606"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.clear">fluid.clear</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:676</li>
+</ul>
+<p><pre>
+ Clears an object or array of its contents. For objects, each property is deleted.
+
+ @param {Object|Array} target the target to be cleared
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-676">    fluid.clear = function (target) {
+        if (fluid.isArrayable(target)) {
+            target.length = 0;
+        } else {
+            for (var i in target) {
+                delete target[i];
+            }
+        }
+    };
+</textarea>
+<pre id="source-676" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-676").value,
+    "application/javascript", document.getElementById("source-676"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.compareStringLength">fluid.compareStringLength</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:690</li>
+</ul>
+<p><pre>
+ @param boolean ascending <code>true</code> if a comparator is to be returned which
+ sorts strings in descending order of length
+    </pre></p>
+<textarea style="display:none;" id="hidden-source-690">    fluid.compareStringLength = function (ascending) {
+        return ascending ? function (a, b) {
+            return a.length - b.length;
+        } : function (a, b) {
+            return b.length - a.length;
+        };
+    };
+</textarea>
+<pre id="source-690" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-690").value,
+    "application/javascript", document.getElementById("source-690"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.computeNickName">fluid.computeNickName</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2057</li>
+</ul>
+<p><pre> Compute a "nickname" given a fully qualified typename, by returning the last path
+ segment.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-2057">    fluid.computeNickName = function (typeName) {
+        var segs = fluid.model.parseEL(typeName);
+        return segs[segs.length - 1];
+    };
+</textarea>
+<pre id="source-2057" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2057").value,
+    "application/javascript", document.getElementById("source-2057"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.concreteTrundler">fluid.concreteTrundler</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1762</li>
+</ul>
+<p><pre> Note that every "strategy" is also a "trundler" of this type, considering just the first two arguments</pre></p>
+<textarea style="display:none;" id="hidden-source-1762">    fluid.concreteTrundler = function (source, seg) {
+        return !source? undefined : source[seg];
+    };
+</textarea>
+<pre id="source-1762" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1762").value,
+    "application/javascript", document.getElementById("source-1762"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.contains">fluid.contains</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:630</li>
+</ul>
+<p><pre>
+ Searches through the supplied object, and returns <code>true</code> if the supplied value
+ can be found
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-630">    fluid.contains = function (obj, value) {
+        return obj ? fluid.find(obj, function (thisValue) {
+            if (value === thisValue) {
+                return true;
+            }
+        }) : undefined;
+    };
+</textarea>
+<pre id="source-630" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-630").value,
+    "application/javascript", document.getElementById("source-630"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.copy">fluid.copy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:381</li>
+</ul>
+<p><pre> Performs a deep copy (clone) of its argument</pre></p>
+<textarea style="display:none;" id="hidden-source-381">    fluid.copy = function (tocopy) {
+        if (fluid.isPrimitive(tocopy)) {
+            return tocopy;
+        }
+        return $.extend(true, fluid.freshContainer(tocopy), tocopy);
+    };
+</textarea>
+<pre id="source-381" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-381").value,
+    "application/javascript", document.getElementById("source-381"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.decodeAccessorArg">fluid.decodeAccessorArg</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:871</li>
+</ul>
+<p><pre> any other return represents an environment value AND a simple configuration we can handle here</pre></p>
+<textarea style="display:none;" id="hidden-source-871">    fluid.decodeAccessorArg = function (arg3) {
+        return (!arg3 || arg3 === fluid.model.defaultGetConfig || arg3 === fluid.model.defaultSetConfig) ?
+            null : (arg3.type === "environment" ? arg3.value : undefined);
+    };
+</textarea>
+<pre id="source-871" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-871").value,
+    "application/javascript", document.getElementById("source-871"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.defaults">fluid.defaults</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1493</li>
+</ul>
+<p><pre>
+ Retrieves and stores a component's default settings centrally.
+ @param {String} componentName the name of the component
+ @param {Object} (optional) an container of key/value pairs to set
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-1493">    fluid.defaults = function (componentName, options) {
+        if (options === undefined) {
+            return fluid.getGradedDefaults(componentName);
+        }
+        else {
+            if (options && options.options) {
+                fluid.fail("Probable error in options structure for " + componentName +
+                    " with option named \"options\" - perhaps you meant to write these options at top level in fluid.defaults? - ", options);
+            }
+            fluid.rawDefaults(componentName, options);
+            if (fluid.hasGrade(options, "autoInit")) {
+                fluid.makeComponent(componentName, fluid.getGradedDefaults(componentName));
+            }
+        }
+    };
+</textarea>
+<pre id="source-1493" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1493").value,
+    "application/javascript", document.getElementById("source-1493"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.destroyValue">fluid.destroyValue</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1869</li>
+</ul>
+<p><pre> Delete the value in the supplied object held at the specified path
+ @param target {Object} The object holding the value to be deleted (possibly empty)
+ @param path {String/Array of String} the path of the value to be deleted
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-1869">    fluid.destroyValue = function (target, path) {
+        if (target) {
+            fluid.model.applyChangeRequest(target, {type: "DELETE", path: path});
+        }
+    };
+</textarea>
+<pre id="source-1869" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1869").value,
+    "application/javascript", document.getElementById("source-1869"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.doIndexDefaults">fluid.doIndexDefaults</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1456</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1456">    fluid.doIndexDefaults = function (defaultName, defaults, index, indexSpec) {
+        var requiredGrades = fluid.makeArray(indexSpec.gradeNames);
+        for (var i = 0; i < requiredGrades.length; ++ i) {
+            if (!fluid.hasGrade(defaults, requiredGrades[i])) return;
+        }
+        var indexFunc = typeof(indexSpec.indexFunc) === "function" ? indexSpec.indexFunc : fluid.getGlobalValue(indexSpec.indexFunc);
+        var keys = indexFunc(defaults) || [];
+        for (var j = 0; j < keys.length; ++ j) {
+            (index[keys[j]] = index[keys[j]] || []).push(defaultName);
+        }
+    };
+</textarea>
+<pre id="source-1456" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1456").value,
+    "application/javascript", document.getElementById("source-1456"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.doLog">fluid.doLog</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:290</li>
+</ul>
+<p><pre> Actually do the work of logging <code>args</code> to the environment's console. If the standard "console"
+ stream is available, the message will be sent there - otherwise either the
+ YAHOO logger or the Opera "postError" stream will be used. On capable environments (those other than
+ IE8 or IE9) the entire argument set will be dispatched to the logger - otherwise they will be flattened into
+ a string first, destroying any information held in non-primitive values. 
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-290">    fluid.doLog = function (args) {
+        var str = args.join("");
+        if (typeof (console) !== "undefined") {
+            if (console.debug) {
+                console.debug.apply(console, args);
+            } else if (typeof (console.log) === "function") {
+                console.log.apply(console, args);
+            } else {
+                console.log(str); // this branch executes on old IE, fully synthetic console.log
+            }
+        } else if (typeof (YAHOO) !== "undefined") {
+            YAHOO.log(str);
+        } else if (typeof (opera) !== "undefined") {
+            opera.postError(str);
+        }
+    };
+</textarea>
+<pre id="source-290" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-290").value,
+    "application/javascript", document.getElementById("source-290"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.driveStrategy">fluid.driveStrategy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1749</li>
+</ul>
+<p><pre> A simple stand-in for "fluid.get" where the material is covered by a single strategy  </pre></p>
+<textarea style="display:none;" id="hidden-source-1749">    fluid.driveStrategy = function (root, pathSegs, strategy) {
+        pathSegs = fluid.makeArray(pathSegs);
+        for (var i = 0; i < pathSegs.length; ++ i) {
+            if (!root) {
+                return undefined;
+            }
+            root = strategy(root, pathSegs[i], i + 1, pathSegs);
+        }
+        return root;
+    };
+</textarea>
+<pre id="source-1749" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1749").value,
+    "application/javascript", document.getElementById("source-1749"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.each">fluid.each</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:445</li>
+</ul>
+<p><pre> Better jQuery.each which works on hashes as well as having the arguments
+ the right way round.
+ @param source {Arrayable or Object} The container to be iterated over
+ @param func {Function} A function accepting (value, key) for each iterated
+ object. This function may return a value to terminate the iteration
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-445">    fluid.each = function (source, func) {
+        if (fluid.isArrayable(source)) {
+            for (var i = 0; i < source.length; ++i) {
+                func(source[i], i);
+            }
+        } else {
+            for (var key in source) {
+                func(source[key], key);
+            }
+        }
+    };
+</textarea>
+<pre id="source-445" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-445").value,
+    "application/javascript", document.getElementById("source-445"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.emptySubcomponent">fluid.emptySubcomponent</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2041</li>
+</ul>
+<p><pre> TODO: this method is inefficient and inappropriate, should simply discard options entirely pending review </pre></p>
+<textarea style="display:none;" id="hidden-source-2041">    fluid.emptySubcomponent = function (options) {
+        var that = fluid.typeTag("fluid.emptySubcomponent");
+        that.options = options || {};
+        that.options.gradeNames = [that.typeName];
+        
+        options = fluid.makeArray(options);
+        for (var i = 0; i < options.length; ++i) {
+            that[options[i]] = fluid.identity;
+        }
+        return that;
+    };
+</textarea>
+<pre id="source-2041" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2041").value,
+    "application/javascript", document.getElementById("source-2041"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.event.identifyListener">fluid.event.identifyListener</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:982</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-982">    fluid.event.identifyListener = function (listener) {
+        if (!listener.$$fluid_guid) {
+            listener.$$fluid_guid = fluid.allocateGuid();
+        }
+        return listener.$$fluid_guid;
+    };
+</textarea>
+<pre id="source-982" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-982").value,
+    "application/javascript", document.getElementById("source-982"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.event.nameEvent">fluid.event.nameEvent</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1038</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1038">    fluid.event.nameEvent = function (that, eventName) {
+        return eventName + " of " + fluid.nameComponent(that);
+    };
+</textarea>
+<pre id="source-1038" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1038").value,
+    "application/javascript", document.getElementById("source-1038"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.expect">fluid.expect</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:232</li>
+</ul>
+<p><pre> TODO: rescued from kettleCouchDB.js - clean up in time</pre></p>
+<textarea style="display:none;" id="hidden-source-232">    fluid.expect = function (name, members, target) {
+        fluid.transform(fluid.makeArray(members), function (key) {
+            if (typeof target[key] === "undefined") {
+                fluid.fail(name + " missing required parameter " + key);
+            }
+        });
+    };
+</textarea>
+<pre id="source-232" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-232").value,
+    "application/javascript", document.getElementById("source-232"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.fail">fluid.fail</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:170</li>
+</ul>
+<p><pre>
+ Signals an error to the framework. The default behaviour is to log a structured error message and throw a variety of
+ exception (hard or soft) - see fluid.pushSoftFailure for configuration
+
+ @param {String} message the error message to log
+ @param ... Additional arguments, suitable for being sent to native console.log function
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-170">    fluid.fail = function (message /*, ... */) { // jslint:ok - whitespace in arg list
+        var args = fluid.makeArray(arguments);
+        var activity = fluid.makeArray(fluid.describeActivity()); // Take copy since we will destructively modify
+        fluid.popActivity(activity.length);
+        var topFailure = softFailure[0];
+        if (typeof(topFailure) === "boolean") {
+            fluid.builtinFail(topFailure, args, activity);
+        } else if (typeof(topFailure) === "function") {
+            topFailure(args, activity);
+        }
+    };
+</textarea>
+<pre id="source-170" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-170").value,
+    "application/javascript", document.getElementById("source-170"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.filterKeys">fluid.filterKeys</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:597</li>
+</ul>
+<p><pre> Accepts an object to be filtered, and a list of keys. Either all keys not present in
+ the list are removed, or only keys present in the list are returned.
+ @param toFilter {Array|Object} The object to be filtered - this will be modified by the operation
+ @param keys {Array of String} The list of keys to operate with
+ @param exclude {boolean} If <code>true</code>, the keys listed are removed rather than included
+ @return the filtered object (the same object that was supplied as <code>toFilter</code>
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-597">    fluid.filterKeys = function (toFilter, keys, exclude) {
+        return fluid.remove_if($.extend({}, toFilter), function (value, key) {
+            return exclude ^ ($.inArray(key, keys) === -1);
+        });
+    };
+</textarea>
+<pre id="source-597" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-597").value,
+    "application/javascript", document.getElementById("source-597"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.fireEvent">fluid.fireEvent</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1176</li>
+</ul>
+<p><pre> Fire the specified event with supplied arguments. This call is an optimisation utility
+ which handles the case where the firer has not been instantiated (presumably as a result
+ of having no listeners registered)
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-1176">    fluid.fireEvent = function (component, path, args) {
+        var firer = fluid.get(component, path);
+        if (firer) {
+            firer.fire.apply(null, fluid.makeArray(args));
+        }
+    };
+</textarea>
+<pre id="source-1176" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1176").value,
+    "application/javascript", document.getElementById("source-1176"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.freshContainer">fluid.freshContainer</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:375</li>
+</ul>
+<p><pre> Return an empty container as the same type as the argument (either an
+ array or hash </pre></p>
+<textarea style="display:none;" id="hidden-source-375">    fluid.freshContainer = function (tocopy) {
+        return fluid.isArrayable(tocopy) ? [] : {};
+    };
+</textarea>
+<pre id="source-375" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-375").value,
+    "application/javascript", document.getElementById("source-375"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.generate">fluid.generate</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:556</li>
+</ul>
+<p><pre> Fills an array of given size with copies of a value or result of a function invocation
+ @param n {Number} The size of the array to be filled
+ @param generator {Object|Function} Either a value to be replicated or function to be called 
+ @param applyFunc {Boolean} If true, treat the generator value as a function to be invoked with
+ argument equal to the index position
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-556">    fluid.generate = function (n, generator, applyFunc) {
+        var togo = [];
+        for (var i = 0; i < n; ++ i) {
+            togo[i] = applyFunc? generator(i) : generator;
+        }
+        return togo;
+    };
+</textarea>
+<pre id="source-556" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-556").value,
+    "application/javascript", document.getElementById("source-556"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.generateUniquePrefix">fluid.generateUniquePrefix</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:968</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-968">    fluid.generateUniquePrefix = function () {
+        return (Math.floor(Math.random() * 1e12)).toString(36) + "-";
+    };
+</textarea>
+<pre id="source-968" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-968").value,
+    "application/javascript", document.getElementById("source-968"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.get">fluid.get</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:893</li>
+</ul>
+<p><pre> Evaluates an EL expression by fetching a dot-separated list of members
+ recursively from a provided root.
+ @param root The root data structure in which the EL expression is to be evaluated
+ @param {string/array} EL The EL expression to be evaluated, or an array of path segments
+ @param config An optional configuration or environment structure which can customise the fetch operation
+ @return The fetched data value.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-893">    fluid.get = function (root, EL, config, initSegs) {
+        var env = fluid.decodeAccessorArg(config);
+        return env === undefined ?
+            fluid.model.getWithStrategy(root, EL, config, initSegs)
+            : fluid.model.accessImpl(root, EL, fluid.NO_VALUE, env, null, false, fluid.model.traverseSimple);
+    };
+</textarea>
+<pre id="source-893" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-893").value,
+    "application/javascript", document.getElementById("source-893"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.getGlobalValue">fluid.getGlobalValue</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:904</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-904">    fluid.getGlobalValue = function (path, env) {
+        if (path) {
+            env = env || fluid.environment;
+            return fluid.get(globalObject, path, {type: "environment", value: env});
+        }
+    };
+</textarea>
+<pre id="source-904" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-904").value,
+    "application/javascript", document.getElementById("source-904"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.getMembers">fluid.getMembers</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:583</li>
+</ul>
+<p><pre> Extracts a particular member from each member of a container, returning a new container of the same type
+ @param holder {Array|Object} The container to be filtered
+ @param name {String|Array of String} An EL path to be fetched from each members
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-583">    fluid.getMembers = function (holder, name) {
+        return fluid.transform(holder, function(member) {
+            return fluid.get(member, name);
+        });
+    };
+</textarea>
+<pre id="source-583" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-583").value,
+    "application/javascript", document.getElementById("source-583"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.hasGrade">fluid.hasGrade</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1377</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1377">    fluid.hasGrade = function (options, gradeName) {
+        return !options || !options.gradeNames ? false : fluid.contains(options.gradeNames, gradeName);
+    };
+</textarea>
+<pre id="source-1377" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1377").value,
+    "application/javascript", document.getElementById("source-1377"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.identity">fluid.identity</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:330</li>
+</ul>
+<p><pre> A basic utility that returns its argument unchanged </pre></p>
+<textarea style="display:none;" id="hidden-source-330">    fluid.identity = function (arg) {
+        return arg;
+    };
+</textarea>
+<pre id="source-330" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-330").value,
+    "application/javascript", document.getElementById("source-330"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.indexDefaults">fluid.indexDefaults</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1478</li>
+</ul>
+<p><pre> supplied in case a future implementation chooses to implement caching</pre></p>
+<textarea style="display:none;" id="hidden-source-1478">    fluid.indexDefaults = function (indexName, indexSpec) {
+        var index = {};
+        for (var defaultName in defaultsStore) {
+            var defaults = fluid.getGradedDefaults(defaultName);
+            fluid.doIndexDefaults(defaultName, defaults, index, indexSpec);
+        }
+        return index;
+    };
+</textarea>
+<pre id="source-1478" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1478").value,
+    "application/javascript", document.getElementById("source-1478"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.initLittleComponent">fluid.initLittleComponent</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2081</li>
+</ul>
+<p><pre> just to allow backward compatibility whilst grade specifications are not mandatory - similarly for 4th arg "receiver"</pre></p>
+<textarea style="display:none;" id="hidden-source-2081">    fluid.initLittleComponent = function (name, userOptions, localOptions, receiver) {
+        var that = fluid.typeTag(name);
+        localOptions = localOptions || {gradeNames: "fluid.littleComponent"};
+        
+        that.destroy = fluid.makeRootDestroy(that); // overwritten by FluidIoC for constructed subcomponents
+        var mergeOptions = fluid.mergeComponentOptions(that, name, userOptions, localOptions);
+        var options = that.options;
+        var evented = fluid.hasGrade(options, "fluid.eventedComponent");
+        if (evented) {
+            that.events = {};
+        }
+        // deliver to a non-IoC side early receiver of the component (currently only initView)
+        (receiver || fluid.identity)(that, options, mergeOptions.strategy);
+        fluid.computeDynamicComponents(that, mergeOptions);
+        
+        // TODO: ****THIS**** is the point we must deliver and suspend!! Construct the "component skeleton" first, and then continue
+        // for as long as we can continue to find components.
+        for (var i = 0; i < mergeOptions.mergeBlocks.length; ++ i) {
+            mergeOptions.mergeBlocks[i].initter();
+        }
+        mergeOptions.initter();
+        delete options.mergePolicy;
+        
+        fluid.initLifecycleFunctions(that);
+        fluid.fireEvent(options, "preInitFunction", that);
+
+        if (evented) {
+            fluid.instantiateFirers(that, options);
+            fluid.mergeListeners(that, that.events, options.listeners);
+        }
+        if (!fluid.hasGrade(options, "autoInit")) {
+            fluid.clearLifecycleFunctions(options);
+        }
+        return that;
+    };
+</textarea>
+<pre id="source-2081" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2081").value,
+    "application/javascript", document.getElementById("source-2081"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.initSubcomponent">fluid.initSubcomponent</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2262</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-2262">    fluid.initSubcomponent = function (that, className, args) {
+        return fluid.initSubcomponents(that, className, args)[0];
+    };
+</textarea>
+<pre id="source-2262" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2262").value,
+    "application/javascript", document.getElementById("source-2262"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.initSubcomponents">fluid.initSubcomponents</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2238</li>
+</ul>
+<p><pre> Initialise all the "subcomponents" which are configured to be attached to
+ the supplied top-level component, which share a particular "class name". This method
+ of instantiating components is deprecated and will be removed in favour of the automated
+ IoC system in the Fluid 2.0 release.
+ @param {Component} that The top-level component for which sub-components are
+ to be instantiated. It contains specifications for these subcomponents in its
+ <code>options</code> structure.
+ @param {String} className The "class name" or "category" for the subcomponents to
+ be instantiated. A class name specifies an overall "function" for a class of
+ subcomponents and represents a category which accept the same signature of
+ instantiation arguments.
+ @param {Array of Object} args The instantiation arguments to be passed to each
+ constructed subcomponent. These will typically be members derived from the
+ top-level <code>that</code> or perhaps globally discovered from elsewhere. One
+ of these arguments may be <code>fluid.COMPONENT_OPTIONS</code> in which case this
+ placeholder argument will be replaced by instance-specific options configured
+ into the member of the top-level <code>options</code> structure named for the
+ <code>className</code>
+ @return {Array of Object} The instantiated subcomponents, one for each member
+ of <code>that.options[className]</code>.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-2238">    fluid.initSubcomponents = function (that, className, args) {
+        var entry = that.options[className];
+        if (!entry) {
+            return;
+        }
+        var entries = fluid.makeArray(entry);
+        var optindex = -1;
+        var togo = [];
+        args = fluid.makeArray(args);
+        for (var i = 0; i < args.length; ++i) {
+            if (args[i] === fluid.COMPONENT_OPTIONS) {
+                optindex = i;
+            }
+        }
+        for (i = 0; i < entries.length; ++i) {
+            entry = entries[i];
+            if (optindex !== -1) {
+                args[optindex] = entry.options;
+            }
+            togo[i] = fluid.initSubcomponentImpl(that, entry, args);
+        }
+        return togo;
+    };
+</textarea>
+<pre id="source-2238" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2238").value,
+    "application/javascript", document.getElementById("source-2238"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.invokeGlobalFunction">fluid.invokeGlobalFunction</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:927</li>
+</ul>
+<p><pre>
+ Allows for the calling of a function from an EL expression "functionPath", with the arguments "args", scoped to an framework version "environment".
+ @param {Object} functionPath - An EL expression
+ @param {Object} args - An array of arguments to be applied to the function, specified in functionPath
+ @param {Object} environment - (optional) The object to scope the functionPath to  (typically the framework root for version control)
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-927">    fluid.invokeGlobalFunction = function (functionPath, args, environment) {
+        var func = fluid.getGlobalValue(functionPath, environment);
+        if (!func) {
+            fluid.fail("Error invoking global function: " + functionPath + " could not be located");
+        } else {
+            // FLUID-4915: Fixes an issue for IE8 by defaulting to an empty array when args are falsey.
+            return func.apply(null, args || []);
+        }
+    };
+</textarea>
+<pre id="source-927" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-927").value,
+    "application/javascript", document.getElementById("source-927"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.iota">fluid.iota</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:569</li>
+</ul>
+<p><pre> Returns an array of size count, filled with increasing integers, starting at 0 or at the index specified by first.
+ @param count {Number} Size of the filled array to be returned
+ @param first {Number} (optional, defaults to 0) First element to appear in the array 
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-569">    fluid.iota = function (count, first) {
+        first = first || 0;
+        var togo = [];
+        for (var i = 0; i < count; ++i) {
+            togo[togo.length] = first++;
+        }
+        return togo;
+    };
+</textarea>
+<pre id="source-569" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-569").value,
+    "application/javascript", document.getElementById("source-569"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isArrayable">fluid.isArrayable</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:353</li>
+</ul>
+<p><pre> Determines whether the supplied object is an array. The strategy used is an optimised
+ approach taken from an earlier version of jQuery - detecting whether the toString() version
+ of the object agrees with the textual form [object Array], or else whether the object is a
+ jQuery object (the most common source of "fake arrays").
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-353">    fluid.isArrayable = function (totest) {
+        return totest && (totest.jquery || Object.prototype.toString.call(totest) === "[object Array]");
+    };
+</textarea>
+<pre id="source-353" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-353").value,
+    "application/javascript", document.getElementById("source-353"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isDOMNode">fluid.isDOMNode</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:362</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-362">    fluid.isDOMNode = function (obj) {
+      // This could be more sound, but messy:
+      // http://stackoverflow.com/questions/384286/javascript-isdom-how-do-you-check-if-a-javascript-object-is-a-dom-object
+      // The real problem is browsers like IE6, 7 and 8 which still do not feature a "constructor" property on DOM nodes
+        return obj && typeof (obj.nodeType) === "number";
+    };
+</textarea>
+<pre id="source-362" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-362").value,
+    "application/javascript", document.getElementById("source-362"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isDOMish">fluid.isDOMish</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:369</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-369">    fluid.isDOMish = function (obj) {
+        return fluid.isDOMNode(obj) || obj.jquery;
+    };
+</textarea>
+<pre id="source-369" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-369").value,
+    "application/javascript", document.getElementById("source-369"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isLogLevel">fluid.isLogLevel</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:248</li>
+</ul>
+<p><pre> Determines whether the supplied argument is a valid logLevel marker</pre></p>
+<textarea style="display:none;" id="hidden-source-248">    fluid.isLogLevel = function (arg) {
+        return fluid.isMarker(arg) && arg.priority !== undefined;
+    };
+</textarea>
+<pre id="source-248" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-248").value,
+    "application/javascript", document.getElementById("source-248"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isLogging">fluid.isLogging</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:243</li>
+</ul>
+<p><pre> Returns whether logging is enabled</pre></p>
+<textarea style="display:none;" id="hidden-source-243">    fluid.isLogging = function () {
+        return logLevelStack[0].priority > fluid.logLevel.IMPORTANT.priority;
+    };
+</textarea>
+<pre id="source-243" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-243").value,
+    "application/javascript", document.getElementById("source-243"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isMarker">fluid.isMarker</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:738</li>
+</ul>
+<p><pre> Determine whether an object is any marker, or a particular marker - omit the
+ 2nd argument to detect any marker
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-738">    fluid.isMarker = function (totest, type) {
+        if (!totest || typeof (totest) !== 'object' || totest.type !== "fluid.marker") {
+            return false;
+        }
+        if (!type) {
+            return true;
+        }
+        return totest.value === type.value;
+    };
+</textarea>
+<pre id="source-738" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-738").value,
+    "application/javascript", document.getElementById("source-738"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isPlainObject">fluid.isPlainObject</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:357</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-357">    fluid.isPlainObject = function (totest) {
+        var string = Object.prototype.toString.call(totest);
+        return string === "[object Array]" || string === "[object Object]";
+    };
+</textarea>
+<pre id="source-357" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-357").value,
+    "application/javascript", document.getElementById("source-357"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isPrimitive">fluid.isPrimitive</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:343</li>
+</ul>
+<p><pre> Returns true if the argument is a primitive type</pre></p>
+<textarea style="display:none;" id="hidden-source-343">    fluid.isPrimitive = function (value) {
+        var valueType = typeof (value);
+        return !value || valueType === "string" || valueType === "boolean" || valueType === "number" || valueType === "function";
+    };
+</textarea>
+<pre id="source-343" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-343").value,
+    "application/javascript", document.getElementById("source-343"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isValue">fluid.isValue</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:338</li>
+</ul>
+<p><pre> Returns true if the argument is a value other than null or undefined</pre></p>
+<textarea style="display:none;" id="hidden-source-338">    fluid.isValue = function (value) {
+        return value !== undefined && value !== null;
+    };
+</textarea>
+<pre id="source-338" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-338").value,
+    "application/javascript", document.getElementById("source-338"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.keyForValue">fluid.keyForValue</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:646</li>
+</ul>
+<p><pre>
+ Searches through the supplied object for the first value which matches the one supplied.
+ @param obj {Object} the Object to be searched through
+ @param value {Object} the value to be found. This will be compared against the object's
+ member using === equality.
+ @return {String} The first key whose value matches the one supplied, or <code>null</code> if no
+ such key is found.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-646">    fluid.keyForValue = function (obj, value) {
+        return fluid.find(obj, function (thisValue, key) {
+            if (value === thisValue) {
+                return key;
+            }
+        });
+    };
+</textarea>
+<pre id="source-646" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-646").value,
+    "application/javascript", document.getElementById("source-646"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.log">fluid.log</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:313</li>
+</ul>
+<p><pre> Log a message to a suitable environmental console. If the first argument to fluid.log is
+ one of the members of the <code>fluid.logLevel</code> structure, this will be taken as the priority 
+ of the logged message - else if will default to <code>fluid.logLevel.INFO</code>. If the logged message
+ priority does not exceed that set by the most recent call to the <code>fluid.setLogging</code> function,
+ the message will not appear.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-313">    fluid.log = function (message /*, ... */) { // jslint:ok - whitespace in arg list
+        var directArgs = fluid.makeArray(arguments);
+        var userLogLevel = fluid.logLevel.INFO;
+        if (fluid.isLogLevel(directArgs[0])) {
+            userLogLevel = directArgs.shift();
+        }
+        if (fluid.passLogLevel(userLogLevel)) {
+            var arg0 = fluid.renderTimestamp(new Date()) + ":  ";
+            var args = [arg0].concat(directArgs);
+            fluid.doLog(args);
+        }
+    };
+</textarea>
+<pre id="source-313" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-313").value,
+    "application/javascript", document.getElementById("source-313"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.logActivity">fluid.logActivity</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:107</li>
+</ul>
+<p><pre> Renders either the current activity or the supplied activity to the console</pre></p>
+<textarea style="display:none;" id="hidden-source-107">    fluid.logActivity = function (activity) {
+        activity = activity || fluid.describeActivity();
+        var rendered = fluid.renderActivity(activity).reverse();
+        fluid.log("Current activity: ");
+        fluid.each(rendered, function (args) {
+            fluid.doLog(args);
+        });
+    };
+</textarea>
+<pre id="source-107" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-107").value,
+    "application/javascript", document.getElementById("source-107"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.makeArray">fluid.makeArray</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:390</li>
+</ul>
+<p><pre> Corrected version of jQuery makeArray that returns an empty array on undefined rather than crashing.
+ We don't deal with as many pathological cases as jQuery</pre></p>
+<textarea style="display:none;" id="hidden-source-390">    fluid.makeArray = function (arg) {
+        var togo = [];
+        if (arg !== null && arg !== undefined) {
+            if (fluid.isPrimitive(arg) || typeof(arg.length) !== "number") {
+                togo.push(arg);
+            }
+            else {
+                for (var i = 0; i < arg.length; ++ i) {
+                    togo[i] = arg[i];
+                }
+            }
+        }
+        return togo;
+    };
+</textarea>
+<pre id="source-390" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-390").value,
+    "application/javascript", document.getElementById("source-390"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.makeComponent">fluid.makeComponent</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1509</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1509">    fluid.makeComponent = function (componentName, options) {
+        if (!options.initFunction || !options.gradeNames) {
+            fluid.fail("Cannot autoInit component " + componentName + " which does not have an initFunction and gradeNames defined");
+        }
+        var creator = function () {
+            return fluid.initComponent(componentName, arguments);
+        };
+        var existing = fluid.getGlobalValue(componentName);
+        if (existing) {
+            $.extend(creator, existing);
+        }
+        fluid.setGlobalValue(componentName, creator);
+    };
+</textarea>
+<pre id="source-1509" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1509").value,
+    "application/javascript", document.getElementById("source-1509"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.makeComponents">fluid.makeComponents</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1523</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1523">    fluid.makeComponents = function (components, env) {
+        fluid.each(components, function (value, key) {
+            var options = {
+                gradeNames: fluid.makeArray(value).concat(["autoInit"])
+            };
+            fluid.defaults(key, options);
+        });
+    };
+</textarea>
+<pre id="source-1523" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1523").value,
+    "application/javascript", document.getElementById("source-1523"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.makeEventFirer">fluid.makeEventFirer</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1052</li>
+</ul>
+<p><pre> Construct an "event firer" object which can be used to register and deregister
+ listeners, to which "events" can be fired. These events consist of an arbitrary
+ function signature. General documentation on the Fluid events system is at
+ http://wiki.fluidproject.org/display/fluid/The+Fluid+Event+System .
+ @param {Boolean} unicast If <code>true</code>, this is a "unicast" event which may only accept
+ a single listener.
+ @param {Boolean} preventable If <code>true</code> the return value of each handler will
+ be checked for <code>false</code> in which case further listeners will be shortcircuited, and this
+ will be the return value of fire()
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-1052">    fluid.makeEventFirer = function (unicast, preventable, name) {
+        var listeners; // = {}
+        var byId; // = {}
+        var sortedListeners; // = []
+        
+        function fireToListeners(listeners, args, wrapper) {
+            if (!listeners) { return; }
+            fluid.log("Firing event " + name + " to list of " + listeners.length + " listeners");
+            for (var i = 0; i < listeners.length; ++i) {
+                var lisrec = listeners[i];
+                lisrec.listener = fluid.event.resolveListener(lisrec.listener);
+                var listener = lisrec.listener;
+
+                if (lisrec.predicate && !lisrec.predicate(listener, args)) {
+                    continue;
+                }
+                var value;
+                var ret = (wrapper ? wrapper(listener) : listener).apply(null, args);
+                if (preventable && ret === false) {
+                    value = false;
+                }
+                if (unicast) {
+                    value = ret;
+                }
+                if (value !== undefined) {
+                    return value;
+                }
+            }
+        }
+        var identify = fluid.event.identifyListener;
+        
+        var that;
+        var lazyInit = function () { // Lazy init function to economise on object references
+            listeners = {};
+            byId = {};
+            sortedListeners = [];
+            that.addListener = function (listener, namespace, predicate, priority, softNamespace) {
+                if (!listener) {
+                    return;
+                }
+                if (unicast) {
+                    namespace = "unicast";
+                }
+                if (typeof(listener) === "string") {
+                    listener = {globalName: listener};
+                }
+                var id = identify(listener);
+                namespace = namespace || id;
+                var record = {listener: listener, predicate: predicate,
+                    namespace: namespace,
+                    softNamespace: softNamespace,
+                    priority: fluid.event.mapPriority(priority, sortedListeners.length)};
+                byId[id] = record;
+                if (softNamespace) {
+                    var thisListeners = (listeners[namespace] = fluid.makeArray(listeners[namespace]));
+                    thisListeners.push(record);
+                }
+                else {
+                    listeners[namespace] = record;
+                }
+                
+                sortedListeners = fluid.event.sortListeners(listeners);
+            };
+            that.addListener.apply(null, arguments);
+        };
+        that = {
+            name: name,
+            typeName: "fluid.event.firer",
+            addListener: function () {
+                lazyInit.apply(null, arguments);
+            },
+
+            removeListener: function (listener) {
+                if (!listeners) { return; }
+                var namespace, id;
+                if (typeof (listener) === "string") {
+                    namespace = listener;
+                    var record = listeners[listener];
+                    if (!record) {
+                        return;
+                    }
+                    listener = record.length !== undefined ? record : record.listener;
+                }
+                if (typeof(listener) === "function") {
+                    id = identify(listener);
+                    if (!id) {
+                        fluid.fail("Cannot remove unregistered listener function ", listener, " from event " + that.name);
+                    }
+                }
+                var rec = byId[id];
+                var softNamespace = rec && rec.softNamespace;
+                namespace = namespace || (rec && rec.namespace) || id;
+                delete byId[id];
+                if (softNamespace) {
+                    fluid.remove_if(listeners[namespace], function (thisLis) {
+                        return thisLis.listener.$$fluid_guid === id;
+                    });
+                } else {
+                    delete listeners[namespace];
+                }
+                sortedListeners = fluid.event.sortListeners(listeners);
+            },
+            // NB - this method exists currently solely for the convenience of the new,
+            // transactional changeApplier. As it exists it is hard to imagine the function
+            // being helpful to any other client. We need to get more experience on the kinds
+            // of listeners that are useful, and ultimately factor this method away.
+            fireToListeners: function (listeners, args, wrapper) {
+                return fireToListeners(listeners, args, wrapper);
+            },
+            fire: function () {
+                return fireToListeners(sortedListeners, arguments);
+            }
+        };
+        return that;
+    };
+</textarea>
+<pre id="source-1052" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1052").value,
+    "application/javascript", document.getElementById("source-1052"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.makeFlatten">fluid.makeFlatten</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:610</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-610">    fluid.makeFlatten = function (index) {
+        return function (obj) {
+            var togo = [];
+            fluid.each(obj, function (/* value, key */) {
+                togo.push(arguments[index]);
+            });
+            return togo;
+        };
+    };
+</textarea>
+<pre id="source-610" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-610").value,
+    "application/javascript", document.getElementById("source-610"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.make_find">fluid.make_find</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:457</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-457">    fluid.make_find = function (find_if) {
+        var target = find_if ? false : undefined;
+        return function (source, func, deffolt) {
+            var disp;
+            if (fluid.isArrayable(source)) {
+                for (var i = 0; i < source.length; ++i) {
+                    disp = func(source[i], i);
+                    if (disp !== target) {
+                        return find_if ? source[i] : disp;
+                    }
+                }
+            } else {
+                for (var key in source) {
+                    disp = func(source[key], key);
+                    if (disp !== target) {
+                        return find_if ? source[key] : disp;
+                    }
+                }
+            }
+            return deffolt;
+        };
+    };
+</textarea>
+<pre id="source-457" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-457").value,
+    "application/javascript", document.getElementById("source-457"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.merge">fluid.merge</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1784</li>
+</ul>
+<p><pre> Merge a collection of options structures onto a target, following an optional policy.
+ This method is now used only for the purpose of merging "dead" option documents in order to
+ cache graded component defaults. Component option merging is now performed by the 
+ fluid.makeMergeOptions pathway which sets up a deferred merging process. This function
+ will not be removed in the Fluid 2.0 release but it is recommended that users not call it
+ directly.
+ The behaviour of this function is explained more fully on
+ the page http://wiki.fluidproject.org/display/fluid/Options+Merging+for+Fluid+Components .
+ @param policy {Object/String} A "policy object" specifiying the type of merge to be performed.
+ If policy is of type {String} it should take on the value "replace" representing
+ a static policy. If it is an
+ Object, it should contain a mapping of EL paths onto these String values, representing a
+ fine-grained policy. If it is an Object, the values may also themselves be EL paths
+ representing that a default value is to be taken from that path.
+ @param options1, options2, .... {Object} an arbitrary list of options structure which are to
+ be merged together. These will not be modified.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-1784">    fluid.merge = function (policy /*, ... sources */) {
+        var sources = Array.prototype.slice.call(arguments, 1);
+        var compiled = fluid.compileMergePolicy(policy).builtins;
+        var options = fluid.makeMergeOptions(compiled, sources, {});
+        options.initter();
+        return options.target;
+    };
+</textarea>
+<pre id="source-1784" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1784").value,
+    "application/javascript", document.getElementById("source-1784"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.mergeListenerPolicy">fluid.mergeListenerPolicy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1256</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1256">    fluid.mergeListenerPolicy = function (target, source, key) {
+        // cf. triage in mergeListeners
+        var hasNamespace = key.charAt(0) !== "{" && key.indexOf(".") !== -1;
+        return hasNamespace ? (source || target) : fluid.makeArray(target).concat(fluid.makeArray(source));
+    };
+</textarea>
+<pre id="source-1256" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1256").value,
+    "application/javascript", document.getElementById("source-1256"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.mergeListenersPolicy">fluid.mergeListenersPolicy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1262</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1262">    fluid.mergeListenersPolicy = function (target, source) {
+        target = target || {};
+        fluid.each(source, function (listeners, key) {
+            target[key] = fluid.mergeListenerPolicy(target[key], listeners, key);
+        });
+        return target;
+    };
+</textarea>
+<pre id="source-1262" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1262").value,
+    "application/javascript", document.getElementById("source-1262"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.messageLocator">fluid.messageLocator</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2434</li>
+</ul>
+<p><pre> Converts a data structure consisting of a mapping of keys to message strings,
+ into a "messageLocator" function which maps an array of message codes, to be
+ tried in sequence until a key is found, and an array of substitution arguments,
+ into a substituted message string.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-2434">    fluid.messageLocator = function (messageBase, resolveFunc) {
+        var resolver = fluid.messageResolver({messageBase: messageBase, resolveFunc: resolveFunc});
+        return function (messagecodes, args) {
+            return resolver.resolve(messagecodes, args);
+        };
+    };
+</textarea>
+<pre id="source-2434" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2434").value,
+    "application/javascript", document.getElementById("source-2434"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.messageResolver.preInit">fluid.messageResolver.preInit</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2394</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-2394">    fluid.messageResolver.preInit = function (that) {
+        that.messageBase = that.options.parseFunc(that.options.messageBase);
+        
+        that.lookup = function (messagecodes) {
+            var resolved = fluid.messageResolver.resolveOne(that.messageBase, messagecodes);
+            if (resolved === undefined) {
+                return fluid.find(that.options.parents, function (parent) {
+                    return parent ? parent.lookup(messagecodes) : undefined;
+                });
+            } else {
+                return {template: resolved, resolveFunc: that.options.resolveFunc};
+            }
+        };
+        that.resolve = function (messagecodes, args) {
+            if (!messagecodes) {
+                return "[No messagecodes provided]";
+            }
+            messagecodes = fluid.makeArray(messagecodes);
+            var looked = that.lookup(messagecodes);
+            return looked ? looked.resolveFunc(looked.template, args) :
+                "[Message string for key " + messagecodes[0] + " not found]";
+        };
+    };
+</textarea>
+<pre id="source-2394" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2394").value,
+    "application/javascript", document.getElementById("source-2394"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.accessImpl">fluid.model.accessImpl</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:814</li>
+</ul>
+<p><pre> Overall strategy skeleton for all implementations of fluid.get/set</pre></p>
+<textarea style="display:none;" id="hidden-source-814">    fluid.model.accessImpl = function (root, EL, newValue, config, initSegs, returnSegs, traverser) {
+        var segs = fluid.model.pathToSegments(EL, config);
+        var initPos = 0;
+        if (initSegs) {
+            initPos = initSegs.length;
+            segs = initSegs.concat(segs);
+        }
+        var uncess = newValue === fluid.NO_VALUE ? 0 : 1;
+        root = traverser(root, segs, initPos, config, uncess);
+        if (newValue === fluid.NO_VALUE || newValue === fluid.VALUE) { // get or custom
+            return returnSegs ? {root: root, segs: segs} : root;
+        }
+        else { // set
+            root[segs[segs.length - 1]] = newValue;
+        }
+    };
+</textarea>
+<pre id="source-814" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-814").value,
+    "application/javascript", document.getElementById("source-814"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.composePath">fluid.model.composePath</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:773</li>
+</ul>
+<p><pre> Compose an EL expression from two separate EL expressions. The returned
+ expression will be the one that will navigate the first expression, and then
+ the second, from the value reached by the first. Either prefix or suffix may be
+ the empty string</pre></p>
+<textarea style="display:none;" id="hidden-source-773">    fluid.model.composePath = function (prefix, suffix) {
+        return prefix === "" ? suffix : (suffix === "" ? prefix : prefix + "." + suffix);
+    };
+</textarea>
+<pre id="source-773" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-773").value,
+    "application/javascript", document.getElementById("source-773"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.composeSegments">fluid.model.composeSegments</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:778</li>
+</ul>
+<p><pre> Compose any number of path segments, none of which may be empty</pre></p>
+<textarea style="display:none;" id="hidden-source-778">    fluid.model.composeSegments = function () {
+        return fluid.makeArray(arguments).join(".");
+    };
+</textarea>
+<pre id="source-778" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-778").value,
+    "application/javascript", document.getElementById("source-778"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.copyModel">fluid.model.copyModel</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:752</li>
+</ul>
+<p><pre> Copy a source "model" onto a target</pre></p>
+<textarea style="display:none;" id="hidden-source-752">    fluid.model.copyModel = function (target, source) {
+        fluid.clear(target);
+        $.extend(true, target, source);
+    };
+</textarea>
+<pre id="source-752" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-752").value,
+    "application/javascript", document.getElementById("source-752"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.getSimple">fluid.model.getSimple</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:861</li>
+</ul>
+<p><pre> Optimised version of fluid.get for uncustomised configurations</pre></p>
+<textarea style="display:none;" id="hidden-source-861">    fluid.model.getSimple = function (root, EL, environment, initSegs) {
+        if (EL === null || EL === undefined || EL.length === 0) {
+            return root;
+        }
+        return fluid.model.accessSimple(root, EL, fluid.NO_VALUE, environment, initSegs, false);
+    };
+</textarea>
+<pre id="source-861" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-861").value,
+    "application/javascript", document.getElementById("source-861"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.mergeModel">fluid.model.mergeModel</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1533</li>
+</ul>
+<p><pre> Cheapskate implementation which avoids dependency on DataBinding.js</pre></p>
+<textarea style="display:none;" id="hidden-source-1533">    fluid.model.mergeModel = function (target, source) {
+        if (!fluid.isPrimitive(target)) {
+            var copySource = fluid.copy(source);
+            $.extend(true, source, target);
+            $.extend(true, source, copySource);
+        }
+        return source;
+    };
+</textarea>
+<pre id="source-1533" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1533").value,
+    "application/javascript", document.getElementById("source-1533"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.parseEL">fluid.model.parseEL</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:764</li>
+</ul>
+<p><pre> Parse an EL expression separated by periods (.) into its component segments.
+ @param {String} EL The EL expression to be split
+ @return {Array of String} the component path expressions.
+ TODO: This needs to be upgraded to handle (the same) escaping rules (as RSF), so that
+ path segments containing periods and backslashes etc. can be processed, and be harmonised
+ with the more complex implementations in fluid.pathUtil(data binding).
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-764">    fluid.model.parseEL = function (EL) {
+        return EL === "" ? [] : String(EL).split('.');
+    };
+</textarea>
+<pre id="source-764" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-764").value,
+    "application/javascript", document.getElementById("source-764"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.setSimple">fluid.model.setSimple</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:855</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-855">    fluid.model.setSimple = function (root, EL, newValue, environment, initSegs) {
+        fluid.model.accessSimple(root, EL, newValue, environment, initSegs, false);
+    };
+</textarea>
+<pre id="source-855" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-855").value,
+    "application/javascript", document.getElementById("source-855"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.nameComponent">fluid.nameComponent</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1034</li>
+</ul>
+<p><pre> Generate a name for a component for debugging purposes </pre></p>
+<textarea style="display:none;" id="hidden-source-1034">    fluid.nameComponent = function (that) {
+        return that ? "component with typename " + that.typeName + " and id " + that.id : "[unknown component]";
+    };
+</textarea>
+<pre id="source-1034" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1034").value,
+    "application/javascript", document.getElementById("source-1034"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.passLogLevel">fluid.passLogLevel</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:257</li>
+</ul>
+<p><pre> Accepts one of the members of the <code>fluid.logLevel</code> structure. Returns <code>true</code> if
+  a message supplied at that log priority would be accepted at the current logging level. Clients who
+  issue particularly expensive log payload arguments are recommended to guard their logging statements with this
+  function </pre></p>
+<textarea style="display:none;" id="hidden-source-257">    fluid.passLogLevel = function (testLogLevel) {
+        return testLogLevel.priority <= logLevelStack[0].priority;
+    };
+</textarea>
+<pre id="source-257" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-257").value,
+    "application/javascript", document.getElementById("source-257"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.popActivity">fluid.popActivity</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:131</li>
+</ul>
+<p><pre> Undo the effect of the most recent pushActivity, or multiple frames if an argument is supplied</pre></p>
+<textarea style="display:none;" id="hidden-source-131">    fluid.popActivity = function (popframes) {
+        popframes = popframes || 1;
+        if (fluid.activityTracing) {
+            fluid.activityTrace.push({pop: popframes});
+        }
+        var activityStack = fluid.getActivityStack();
+        var popped = activityStack.length - popframes;
+        activityStack.length = popped < 0 ? 0 : popped;
+    };
+</textarea>
+<pre id="source-131" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-131").value,
+    "application/javascript", document.getElementById("source-131"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.popLogging">fluid.popLogging</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:280</li>
+</ul>
+<p><pre> Undo the effect of the most recent "setLogging", returning the logging system to its previous state</pre></p>
+<textarea style="display:none;" id="hidden-source-280">    fluid.popLogging = function () {
+        return logLevelStack.length === 1? logLevelStack[0] : logLevelStack.shift();
+    };
+</textarea>
+<pre id="source-280" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-280").value,
+    "application/javascript", document.getElementById("source-280"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.preInitModelComponent">fluid.preInitModelComponent</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2009</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-2009">    fluid.preInitModelComponent = function (that) {
+        that.model = that.options.model || {};
+        that.applier = that.options.applier || (fluid.makeChangeApplier ? fluid.makeChangeApplier(that.model, that.options.changeApplierOptions) : null);
+    };
+</textarea>
+<pre id="source-2009" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2009").value,
+    "application/javascript", document.getElementById("source-2009"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.pushSoftFailure">fluid.pushSoftFailure</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:195</li>
+</ul>
+<p><pre> 
+ Configure the behaviour of fluid.fail by pushing or popping a disposition record onto a stack.
+ @param {Boolean|Number|Function} condition
+     & Supply either a boolean flag choosing between built-in framework strategies to be used in fluid.fail 
+ - <code>false</code>, the default causes a "hard failure" by using a nonexistent property on a String, which
+ will in all known environments trigger an unhandleable exception which aids debugging. The boolean value
+ <code>true</code> downgrades this behaviour to throw a conventional exception, which is more appropriate in
+ test cases which need to demonstrate failure, as well as in some production environments.
+ The argument may also be a function, which will be called with two arguments, args (the complete arguments to
+ fluid.fail) and activity, an array of strings describing the current framework invocation state.
+ Finally, the argument may be the number <code>-1</code> indicating that the previously supplied disposition should
+ be popped off the stack
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-195">    fluid.pushSoftFailure = function (condition) {
+        if (typeof (condition) === "boolean" || typeof (condition) === "function") {
+            softFailure.unshift(condition);
+        } else if (condition === -1) {
+            softFailure.shift();
+        }
+    };
+</textarea>
+<pre id="source-195" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-195").value,
+    "application/javascript", document.getElementById("source-195"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.registerGlobalFunction">fluid.registerGlobalFunction</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:941</li>
+</ul>
+<p><pre> Registers a new global function at a given path (currently assumes that
+ it lies within the fluid namespace)
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-941">    fluid.registerGlobalFunction = function (functionPath, func, env) {
+        env = env || fluid.environment;
+        fluid.set(globalObject, functionPath, func, {type: "environment", value: env});
+    };
+</textarea>
+<pre id="source-941" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-941").value,
+    "application/javascript", document.getElementById("source-941"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.registerNamespace">fluid.registerNamespace</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:949</li>
+</ul>
+<p><pre> Ensures that an entry in the global namespace exists</pre></p>
+<textarea style="display:none;" id="hidden-source-949">    fluid.registerNamespace = function (naimspace, env) {
+        env = env || fluid.environment;
+        var existing = fluid.getGlobalValue(naimspace, env);
+        if (!existing) {
+            existing = {};
+            fluid.setGlobalValue(naimspace, existing, env);
+        }
+        return existing;
+    };
+</textarea>
+<pre id="source-949" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-949").value,
+    "application/javascript", document.getElementById("source-949"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.remove_if">fluid.remove_if</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:525</li>
+</ul>
+<p><pre> Scan through a list or hash of objects, removing those which match a predicate. Similar to
+ jQuery.grep, only acts on the list in-place by removal, rather than by creating
+ a new list by inclusion.
+ @param source {Array|Object} The list or hash of objects to be scanned over.
+ @param fn {Function} A predicate function determining whether an element should be
+ removed. This accepts the standard signature (object, index) and returns a "truthy"
+ result in order to determine that the supplied object should be removed from the list.
+ @param target {Array|Object} (optional) A target object of the same type as <code>source</code>, which will
+ receive any objects removed from it.
+ @return <code>target</code>, containing the removed elements, if it was supplied, or else <code>source</code>
+ modified by the operation of removing the matched elements.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-525">    fluid.remove_if = function (source, fn, target) {
+        if (fluid.isArrayable(source)) {
+            for (var i = 0; i < source.length; ++i) {
+                if (fn(source[i], i)) {
+                    if (target) {
+                        target.push(source[i]);
+                    }
+                    source.splice(i, 1);
+                    --i;
+                }
+            }
+        } else {
+            for (var key in source) {
+                if (fn(source[key], key)) {
+                    if (target) {
+                        target[key] = source[key];
+                    }
+                    delete source[key];
+                }
+            }
+        }
+        return target || source;
+    };
+</textarea>
+<pre id="source-525" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-525").value,
+    "application/javascript", document.getElementById("source-525"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.set">fluid.set</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:876</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-876">    fluid.set = function (root, EL, newValue, config, initSegs) {
+        var env = fluid.decodeAccessorArg(config);
+        if (env === undefined) {
+            fluid.model.setWithStrategy(root, EL, newValue, config, initSegs);
+        } else {
+            fluid.model.setSimple(root, EL, newValue, env, initSegs);
+        }
+    };
+</textarea>
+<pre id="source-876" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-876").value,
+    "application/javascript", document.getElementById("source-876"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.setLogging">fluid.setLogging</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:265</li>
+</ul>
+<p><pre> Method to allow user to control the logging level. Accepts either a boolean, for which <code>true</code>
+ represents <code>fluid.logLevel.INFO</code> and <code>false</code> represents <code>fluid.logLevel.IMPORTANT</code> (the default), 
+ or else any other member of the structure <code>fluid.logLevel</code>
+ Messages whose priority is strictly less than the current logging level will not be shown</pre></p>
+<textarea style="display:none;" id="hidden-source-265">    fluid.setLogging = function (enabled) {
+        var logLevel;
+        if (typeof enabled === "boolean") {
+            logLevel = fluid.logLevel[enabled? "INFO" : "IMPORTANT"];
+        } else if (fluid.isLogLevel(enabled)) {
+            logLevel = enabled;
+        } else {
+            fluid.fail("Unrecognised fluid logging level ", enabled);
+        }
+        logLevelStack.unshift(logLevel);
+    };
+</textarea>
+<pre id="source-265" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-265").value,
+    "application/javascript", document.getElementById("source-265"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.stringTemplate">fluid.stringTemplate</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2371</li>
+</ul>
+<p><pre>
+ Simple string template system.
+ Takes a template string containing tokens in the form of "%value".
+ Returns a new string with the tokens replaced by the specified values.
+ Keys and values can be of any data type that can be coerced into a string. Arrays will work here as well.
+
+ @param {String}    template    a string (can be HTML) that contains tokens embedded into it
+ @param {object}    values      a collection of token keys and values
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-2371">    fluid.stringTemplate = function (template, values) {
+        var keys = fluid.keys(values);
+        keys = keys.sort(fluid.compareStringLength());
+        for (var i = 0; i < keys.length; ++i) {
+            var key = keys[i];
+            var re = fluid.stringToRegExp("%" + key, "g");
+            template = template.replace(re, values[key]);
+        }
+        return template;
+    };
+</textarea>
+<pre id="source-2371" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2371").value,
+    "application/javascript", document.getElementById("source-2371"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.stringToRegExp">fluid.stringToRegExp</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2358</li>
+</ul>
+<p><pre>
+ Converts a string to a regexp with the specified flags given in parameters
+ @param {String} a string that has to be turned into a regular expression
+ @param {String} the flags to provide to the reg exp
+    </pre></p>
+<textarea style="display:none;" id="hidden-source-2358">    fluid.stringToRegExp = function (str, flags) {
+        return new RegExp(str.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"), flags);
+    };
+</textarea>
+<pre id="source-2358" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2358").value,
+    "application/javascript", document.getElementById("source-2358"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.transform">fluid.transform</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:425</li>
+</ul>
+<p><pre> Return a list or hash of objects, transformed by one or more functions. Similar to
+ jQuery.map, only will accept an arbitrary list of transformation functions and also
+ works on non-arrays.
+ @param source {Array or Object} The initial container of objects to be transformed.
+ @param fn1, fn2, etc. {Function} An arbitrary number of optional further arguments,
+ all of type Function, accepting the signature (object, index), where object is the
+ list member to be transformed, and index is its list index. Each function will be
+ applied in turn to each list member, which will be replaced by the return value
+ from the function.
+ @return The finally transformed list, where each member has been replaced by the
+ original member acted on by the function or functions.
+     </pre></p>
+<textarea style="display:none;" id="hidden-source-425">    fluid.transform = function (source) {
+        var togo = fluid.freshContainer(source);
+        if (fluid.isArrayable(source)) {
+            for (var i = 0; i < source.length; ++i) {
+                transformInternal(source, togo, i, arguments);
+            }
+        } else {
+            for (var key in source) {
+                transformInternal(source, togo, key, arguments);
+            }
+        }
+        return togo;
+    };
+</textarea>
+<pre id="source-425" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-425").value,
+    "application/javascript", document.getElementById("source-425"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.tryCatch">fluid.tryCatch</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:210</li>
+</ul>
+<p><pre> code throughout the framework - on several considerations this is desirable.</pre></p>
+<textarea style="display:none;" id="hidden-source-210">    fluid.tryCatch = function (tryfun, catchfun, finallyfun) {
+        finallyfun = finallyfun || fluid.identity;
+        if (fluid.notrycatch) {
+            var togo = tryfun();
+            finallyfun();
+            return togo;
+        } else {
+            try {
+                return tryfun();
+            } catch (e) {
+                if (catchfun) {
+                    catchfun(e);
+                } else {
+                    throw (e);
+                }
+            } finally {
+                finallyfun();
+            }
+        }
+    };
+</textarea>
+<pre id="source-210" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-210").value,
+    "application/javascript", document.getElementById("source-210"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.typeFount">fluid.typeFount</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2066</li>
+</ul>
+<p><pre> A combined "component and grade name" which allows type tags to be declaratively constructed
+ from options material. Any component found bearing this grade will be instantiated first amongst
+ its set of siblings, since it is likely to bear a context-forming type name </pre></p>
+<textarea style="display:none;" id="hidden-source-2066">    fluid.typeFount = function (options) {
+        var that = fluid.initLittleComponent("fluid.typeFount", options);
+        return fluid.typeTag(that.options.targetTypeName);
+    };
+</textarea>
+<pre id="source-2066" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2066").value,
+    "application/javascript", document.getElementById("source-2066"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.typeTag">fluid.typeTag</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1286</li>
+</ul>
+<p><pre> Create a "type tag" component with no state but simply a type name and id. The most
+  minimal form of Fluid component </pre></p>
+<textarea style="display:none;" id="hidden-source-1286">    fluid.typeTag = function (name) {
+        return name ? {
+            typeName: name,
+            id: fluid.allocateGuid()
+        } : null;
+    };
+</textarea>
+<pre id="source-1286" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1286").value,
+    "application/javascript", document.getElementById("source-1286"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.unique">fluid.unique</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1271</li>
+</ul>
+<p><pre> Removes duplicated and empty elements from an already sorted array</pre></p>
+<textarea style="display:none;" id="hidden-source-1271">    fluid.unique = function (array) {
+        return fluid.remove_if(array, function (element, i) {
+            return !element || i > 0 && element === array[i - 1];
+        });
+    };
+</textarea>
+<pre id="source-1271" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1271").value,
+    "application/javascript", document.getElementById("source-1271"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="mergeOptions.destroyValue">mergeOptions.destroyValue</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1919</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1919">        mergeOptions.destroyValue = function (path) { // This method is a temporary hack to assist FLUID-5091
+            for (var i = 0; i < mergeBlocks.length; ++ i) {
+                fluid.destroyValue(mergeBlocks[i].target, path);
+            }
+            fluid.destroyValue(baseMergeOptions.target, path);
+        };
+</textarea>
+<pre id="source-1919" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1919").value,
+    "application/javascript", document.getElementById("source-1919"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="options.initter">options.initter</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1814</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1814">        options.initter = function () {
+            // This hack is necessary to ensure that the FINAL evaluation doesn't balk when discovering a trunk path which was already 
+            // visited during self-driving via the expander. This bi-modality is sort of rubbish, but we currently don't have "room" 
+            // in the strategy API to express when full evaluation is required - and the "flooding API" is not standardised.
+            options.evaluateFully = true;
+            fluid.fetchMergeChildren(options.target, 0, [], options.sources, options.mergePolicy, options);
+        };
+</textarea>
+<pre id="source-1814" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1814").value,
+    "application/javascript", document.getElementById("source-1814"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="that.addListener">that.addListener</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1088</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-1088">            that.addListener = function (listener, namespace, predicate, priority, softNamespace) {
+                if (!listener) {
+                    return;
+                }
+                if (unicast) {
+                    namespace = "unicast";
+                }
+                if (typeof(listener) === "string") {
+                    listener = {globalName: listener};
+                }
+                var id = identify(listener);
+                namespace = namespace || id;
+                var record = {listener: listener, predicate: predicate,
+                    namespace: namespace,
+                    softNamespace: softNamespace,
+                    priority: fluid.event.mapPriority(priority, sortedListeners.length)};
+                byId[id] = record;
+                if (softNamespace) {
+                    var thisListeners = (listeners[namespace] = fluid.makeArray(listeners[namespace]));
+                    thisListeners.push(record);
+                }
+                else {
+                    listeners[namespace] = record;
+                }
+                
+                sortedListeners = fluid.event.sortListeners(listeners);
+            };
+</textarea>
+<pre id="source-1088" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1088").value,
+    "application/javascript", document.getElementById("source-1088"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="that.lookup">that.lookup</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2397</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-2397">        that.lookup = function (messagecodes) {
+            var resolved = fluid.messageResolver.resolveOne(that.messageBase, messagecodes);
+            if (resolved === undefined) {
+                return fluid.find(that.options.parents, function (parent) {
+                    return parent ? parent.lookup(messagecodes) : undefined;
+                });
+            } else {
+                return {template: resolved, resolveFunc: that.options.resolveFunc};
+            }
+        };
+</textarea>
+<pre id="source-2397" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2397").value,
+    "application/javascript", document.getElementById("source-2397"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="that.resolve">that.resolve</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2407</li>
+</ul>
+<p><pre></pre></p>
+<textarea style="display:none;" id="hidden-source-2407">        that.resolve = function (messagecodes, args) {
+            if (!messagecodes) {
+                return "[No messagecodes provided]";
+            }
+            messagecodes = fluid.makeArray(messagecodes);
+            var looked = that.lookup(messagecodes);
+            return looked ? looked.resolveFunc(looked.template, args) :
+                "[Message string for key " + messagecodes[0] + " not found]";
+        };
+</textarea>
+<pre id="source-2407" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2407").value,
+    "application/javascript", document.getElementById("source-2407"));
+</script>
+<a href="#top">back to top</a>
+
+
+
+<h3><a name="fluid.FluidError">fluid.FluidError</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:142</li>
+</ul>
+<p><pre> unsupported, non-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-142">    fluid.FluidError = function (message) {
+        this.message = message;
+        this.stack = new Error().stack;
+    };
+</textarea>
+<pre id="source-142" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-142").value,
+    "application/javascript", document.getElementById("source-142"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.clearLifecycleFunctions">fluid.clearLifecycleFunctions</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2154</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-2154">    fluid.clearLifecycleFunctions = function (options) {
+        fluid.each(fluid.lifecycleFunctions, function (value, key) {
+            delete options[key];
+        });
+        delete options.initFunction;
+    };
+</textarea>
+<pre id="source-2154" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2154").value,
+    "application/javascript", document.getElementById("source-2154"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.compileMergePolicy">fluid.compileMergePolicy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1549</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1549">    fluid.compileMergePolicy = function (mergePolicy) {
+        var builtins = {}, defaultValues = {};
+        var togo = {builtins: builtins, defaultValues: defaultValues};
+        
+        if (!mergePolicy) {
+            return togo;
+        }
+        fluid.each(mergePolicy, function (value, key) {
+            var parsed = {}, builtin = false;
+            if (typeof(value) === "function") {
+                parsed.func = value;
+                builtin = true;
+            }
+            else if (!fluid.isDefaultValueMergePolicy(value)) {
+                var split = value.split(/\s*,\s*/);
+                for (var i = 0; i < split.length; ++ i) {
+                    parsed[split[i]] = true;
+                }
+                builtin = true;
+            }
+            else {
+                // Convert to ginger self-reference - NB, this can only be parsed by IoC
+                fluid.set(defaultValues, key, "{that}.options." + value);
+                togo.hasDefaults = true;
+            }
+            if (builtin) {
+                fluid.set(builtins, fluid.composePath(key, "*"), parsed);
+            }
+        });
+        return togo;
+    };
+</textarea>
+<pre id="source-1549" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1549").value,
+    "application/javascript", document.getElementById("source-1549"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.derefMergePolicy">fluid.derefMergePolicy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1544</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1544">    fluid.derefMergePolicy = function (policy) {
+        return (policy? policy["*"]: emptyPolicy) || emptyPolicy;
+    };
+</textarea>
+<pre id="source-1544" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1544").value,
+    "application/javascript", document.getElementById("source-1544"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.event.addListenerToFirer">fluid.event.addListenerToFirer</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1184</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1184">    fluid.event.addListenerToFirer = function (firer, value, namespace, wrapper) {
+        wrapper = wrapper || fluid.identity;
+        if (fluid.isArrayable(value)) {
+            for (var i = 0; i < value.length; ++i) {
+                fluid.event.addListenerToFirer(firer, value[i], namespace, wrapper);
+            }
+        } else if (typeof (value) === "function" || typeof (value) === "string") {
+            wrapper(firer).addListener(value, namespace);
+        } else if (value && typeof (value) === "object") {
+            wrapper(firer).addListener(value.listener, namespace || value.namespace, value.predicate, value.priority, value.softNamespace);
+        }
+    };
+</textarea>
+<pre id="source-1184" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1184").value,
+    "application/javascript", document.getElementById("source-1184"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.event.impersonateListener">fluid.event.impersonateListener</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:990</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-990">    fluid.event.impersonateListener = function (origListener, newListener) {
+        fluid.event.identifyListener(origListener);
+        newListener.$$fluid_guid = origListener.$$fluid_guid;
+    };
+</textarea>
+<pre id="source-990" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-990").value,
+    "application/javascript", document.getElementById("source-990"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.event.mapPriority">fluid.event.mapPriority</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:996</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-996">    fluid.event.mapPriority = function (priority, count) {
+        return (priority === null || priority === undefined ? count :
+           (priority === "last" ? Number.MAX_VALUE :
+              (priority === "first" ? -Number.MAX_VALUE : -priority)));
+    };
+</textarea>
+<pre id="source-996" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-996").value,
+    "application/javascript", document.getElementById("source-996"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.event.resolveListener">fluid.event.resolveListener</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1021</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1021">    fluid.event.resolveListener = function (listener) {
+        if (listener.globalName) {
+            var listenerFunc = fluid.getGlobalValue(listener.globalName);
+            if (!listenerFunc) {
+                fluid.fail("Unable to look up name " + listener.globalName + " as a global function");
+            } else {
+                listener = listenerFunc;
+            }
+        }
+        return listener;
+    };
+</textarea>
+<pre id="source-1021" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1021").value,
+    "application/javascript", document.getElementById("source-1021"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.event.resolveListenerRecord">fluid.event.resolveListenerRecord</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1198</li>
+</ul>
+<p><pre> unsupported, NON-API function - non-IOC passthrough</pre></p>
+<textarea style="display:none;" id="hidden-source-1198">    fluid.event.resolveListenerRecord = function (records) {
+        return { records: records };
+    };
+</textarea>
+<pre id="source-1198" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1198").value,
+    "application/javascript", document.getElementById("source-1198"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.event.sortListeners">fluid.event.sortListeners</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1008</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1008">    fluid.event.sortListeners = function (listeners) {
+        var togo = [];
+        fluid.each(listeners, function (listener) {
+            if (listener.length !== undefined) {
+                togo = togo.concat(listener);
+            } else {
+                togo.push(listener);
+            }
+        });
+        return togo.sort(fluid.priorityComparator);
+    };
+</textarea>
+<pre id="source-1008" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1008").value,
+    "application/javascript", document.getElementById("source-1008"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.eventFromRecord">fluid.eventFromRecord</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1233</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1233">    fluid.eventFromRecord = function (eventSpec, eventKey, that) {
+        var isIoCEvent = eventSpec && (typeof (eventSpec) !== "string" || eventSpec.charAt(0) === "{");
+        var event;
+        if (isIoCEvent) {
+            if (!fluid.event.resolveEvent) {
+                fluid.fail("fluid.event.resolveEvent could not be loaded - please include FluidIoC.js in order to operate IoC-driven event with descriptor ",
+                    eventSpec);
+            } else {
+                event = fluid.event.resolveEvent(that, eventKey, eventSpec);
+            }
+        } else {
+            event = fluid.makeEventFirer(eventSpec === "unicast", eventSpec === "preventable", fluid.event.nameEvent(that, eventKey));
+        }
+        return event;
+    };
+</textarea>
+<pre id="source-1233" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1233").value,
+    "application/javascript", document.getElementById("source-1233"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.fetchMergeChildren">fluid.fetchMergeChildren</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1638</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1638">    fluid.fetchMergeChildren = function (target, i, segs, sources, mergePolicy, options) {
+        var thisPolicy = fluid.derefMergePolicy(mergePolicy);
+        for (var j = sources.length - 1; j >= 0; -- j) { // this direction now irrelevant - control is in the strategy
+            var source = sources[j];
+            // NB - this detection relies on strategy return being complete objects - which they are
+            // although we need to set up the roots separately. We need to START the process of evaluating each
+            // object root (sources) COMPLETELY, before we even begin! Even if the effect of this is to cause a
+            // dispatch into ourselves almost immediately. We can do this because we can take control over our
+            // TARGET objects and construct them early. Even if there is a self-dispatch, it will be fine since it is
+            // DIRECTED and so will not trouble our "slow" detection of properties. After all self-dispatches end, control
+            // will THEN return to "evaluation of arguments" (expander blocks) and only then FINALLY to this "slow" 
+            // traversal of concrete properties to do the final merge.
+            if (source !== undefined) {
+                fluid.each(source, function (newSource, name) {
+                    if (!target.hasOwnProperty(name)) { // only request each new target key once -- all sources will be queried per strategy
+                        segs[i] = name;
+                        options.strategy(target, name, i + 1, segs, sources, mergePolicy);
+                    }
+                });
+                if (thisPolicy.replace) { // this branch primarily deals with a policy of replace at the root
+                    break;
+                }
+            }
+        }
+        return target;
+    };
+</textarea>
+<pre id="source-1638" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1638").value,
+    "application/javascript", document.getElementById("source-1638"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.findMergeBlocks">fluid.findMergeBlocks</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1833</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-1833">    fluid.findMergeBlocks = function (mergeBlocks, recordType) {
+        return fluid.remove_if(fluid.makeArray(mergeBlocks), function (block) { return block.recordType !== recordType; });
+    };
+</textarea>
+<pre id="source-1833" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1833").value,
+    "application/javascript", document.getElementById("source-1833"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.getActivityStack">fluid.getActivityStack</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:94</li>
+</ul>
+<p><pre> unsupported, non-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-94">    fluid.getActivityStack = function () {
+        var root = fluid.globalThreadLocal();
+        if (!root.activityStack) {
+            root.activityStack = [];
+        }
+        return root.activityStack;
+    };
+</textarea>
+<pre id="source-94" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-94").value,
+    "application/javascript", document.getElementById("source-94"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.getGradedDefaults">fluid.getGradedDefaults</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1401</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-1401">    fluid.getGradedDefaults = function (defaultName, gradeNames) {
+        gradeNames = fluid.makeArray(gradeNames);
+        var key = fluid.gradeNamesToKey(defaultName, gradeNames);
+        var mergedDefaults = mergedDefaultsCache[key];
+        if (mergedDefaults) {
+            var lastTick = 0; // check if cache should be invalidated through real latest tick being later than the one stored
+            var searchGrades = mergedDefaults.defaults.gradeNames || [];
+            for (var i = 0; i < searchGrades.length; ++ i) {
+                lastTick = Math.max(lastTick, gradeTickStore[searchGrades[i]] || 0);
+            }
+            if (lastTick > mergedDefaults.lastTick) {
+                fluid.log("Clearing cache for component " + defaultName + " with gradeNames ", searchGrades);
+                mergedDefaults = null;
+            }
+        }
+        if (!mergedDefaults) {
+            var defaults = fluid.rawDefaults(defaultName);
+            if (!defaults) {
+                return defaults;
+            }
+            mergedDefaults = mergedDefaultsCache[key] = fluid.resolveGrade(defaults, defaultName, gradeNames);
+        }
+        return mergedDefaults.defaults;
+    };
+</textarea>
+<pre id="source-1401" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1401").value,
+    "application/javascript", document.getElementById("source-1401"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.gradeNamesToKey">fluid.gradeNamesToKey</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1373</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-1373">    fluid.gradeNamesToKey = function (defaultName, gradeNames) {
+        return defaultName + "|" + gradeNames.join("|");
+    };
+</textarea>
+<pre id="source-1373" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1373").value,
+    "application/javascript", document.getElementById("source-1373"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.initComponent">fluid.initComponent</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2174</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-2174">    fluid.initComponent = function (componentName, initArgs) {
+        var options = fluid.defaults(componentName);
+        if (!options.gradeNames) {
+            fluid.fail("Cannot initialise component " + componentName + " which has no gradeName registered");
+        }
+        var args = [componentName].concat(fluid.makeArray(initArgs)); // TODO: support different initFunction variants
+        var that;
+        fluid.pushActivity("initComponent", "constructing component of type %componentName with arguments %initArgs",
+            {componentName: componentName, initArgs: initArgs});
+        that = fluid.invokeGlobalFunction(options.initFunction, args);
+        fluid.diagnoseFailedView(componentName, that, options, args);
+        fluid.fireEvent(that.options, "postInitFunction", that);
+        if (fluid.initDependents) {
+            fluid.initDependents(that);
+        }
+        fluid.fireEvent(that.options, "finalInitFunction", that);
+        fluid.clearLifecycleFunctions(that.options);
+        fluid.fireEvent(that, "events.onCreate", that);
+        fluid.popActivity();
+        return fluid.resolveReturnedPath(that.options.returnedPath, that) ? fluid.get(that, that.options.returnedPath) : that;
+    };
+</textarea>
+<pre id="source-2174" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2174").value,
+    "application/javascript", document.getElementById("source-2174"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.initLifecycleFunctions">fluid.initLifecycleFunctions</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2137</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-2137">    fluid.initLifecycleFunctions = function (that) {
+        var gradeNames = that.options.gradeNames || [];
+        fluid.each(fluid.lifecycleFunctions, function (func, key) {
+            var value = that.options[key];
+            for (var i = gradeNames.length - 1; i >= 0; -- i) { // most specific grades are at front
+                if (gradeNames[i] !== "autoInit") {
+                    value = fluid.updateWithDefaultLifecycle(key, value, gradeNames[i]);
+                }
+            }
+            if (value) {
+                that.options[key] = fluid.makeEventFirer(null, null, key);
+                fluid.event.addListenerToFirer(that.options[key], value);
+            }
+        });
+    };
+</textarea>
+<pre id="source-2137" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2137").value,
+    "application/javascript", document.getElementById("source-2137"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.initSubcomponentImpl">fluid.initSubcomponentImpl</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2197</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-2197">    fluid.initSubcomponentImpl = function (that, entry, args) {
+        var togo;
+        if (typeof (entry) !== "function") {
+            var entryType = typeof (entry) === "string" ? entry : entry.type;
+            togo = entryType === "fluid.emptySubcomponent" ?
+                fluid.emptySubcomponent(entry.options) :
+                fluid.invokeGlobalFunction(entryType, args);
+        } else {
+            togo = entry.apply(null, args);
+        }
+
+        // TODO: deprecate "returnedOptions" and incorporate into regular ginger world system
+        var returnedOptions = togo ? togo.returnedOptions : null;
+        if (returnedOptions && returnedOptions.listeners) {
+            fluid.mergeListeners(that, that.events, returnedOptions.listeners);
+        }
+        return togo;
+    };
+</textarea>
+<pre id="source-2197" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2197").value,
+    "application/javascript", document.getElementById("source-2197"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.instantiateFirers">fluid.instantiateFirers</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1250</li>
+</ul>
+<p><pre> unsupported, NON-API function - this is patched from FluidIoC.js</pre></p>
+<textarea style="display:none;" id="hidden-source-1250">    fluid.instantiateFirers = function (that, options) {
+        fluid.each(options.events, function (eventSpec, eventKey) {
+            that.events[eventKey] = fluid.eventFromRecord(eventSpec, eventKey, that);
+        });
+    };
+</textarea>
+<pre id="source-1250" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1250").value,
+    "application/javascript", document.getElementById("source-1250"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.isDefaultValueMergePolicy">fluid.isDefaultValueMergePolicy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1584</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1584">    fluid.isDefaultValueMergePolicy = function (policy) {
+        return typeof(policy) === "string"
+            && (policy.indexOf(",") === -1 && !/replace|preserve|nomerge|noexpand/.test(policy));
+    };
+</textarea>
+<pre id="source-1584" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1584").value,
+    "application/javascript", document.getElementById("source-1584"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.makeMergeOptions">fluid.makeMergeOptions</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1806</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-1806">    fluid.makeMergeOptions = function (policy, sources, userOptions) {
+        var options = {
+            mergePolicy: policy,
+            sources: sources
+        };
+        options = $.extend(options, userOptions);
+        options.target = options.target || fluid.freshContainer(options.sources[0]);
+        options.sourceStrategies = options.sourceStrategies || fluid.generate(options.sources.length, fluid.concreteTrundler);
+        options.initter = function () {
+            // This hack is necessary to ensure that the FINAL evaluation doesn't balk when discovering a trunk path which was already 
+            // visited during self-driving via the expander. This bi-modality is sort of rubbish, but we currently don't have "room" 
+            // in the strategy API to express when full evaluation is required - and the "flooding API" is not standardised.
+            options.evaluateFully = true;
+            fluid.fetchMergeChildren(options.target, 0, [], options.sources, options.mergePolicy, options);
+        };
+        fluid.makeMergeStrategy(options);
+        return options;
+    };
+</textarea>
+<pre id="source-1806" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1806").value,
+    "application/javascript", document.getElementById("source-1806"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.makeMergeStrategy">fluid.makeMergeStrategy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1676</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1676">    fluid.makeMergeStrategy = function (options) {
+        var strategy = function (target, name, i, segs, sources, policy) {
+            if (i > fluid.strategyRecursionBailout) {
+                fluid.fail("Overflow/circularity in options merging, current path is ", segs, " at depth " , i, " - please protect components from merging using the \"nomerge\" merge policy");
+            }
+            if (fluid.isTracing) {
+                fluid.tracing.pathCount.push(fluid.path(segs.slice(0, i)));
+            }
+
+            var oldTarget = undefined;
+            if (target.hasOwnProperty(name)) { // bail out if our work has already been done
+                oldTarget = target[name];
+                if (!options.evaluateFully) { // see notes on this hack in "initter" - early attempt to deal with FLUID-4930
+                    return oldTarget;
+                }
+            }
+            else { // This is hardwired here for performance reasons - no need to protect deeper strategies
+                target[name] = fluid.inEvaluationMarker;
+            }
+            if (sources === undefined) { // recover our state in case this is an external entry point
+                segs = fluid.makeArray(segs); // avoid trashing caller's segs
+                sources = regenerateSources(options.sources, segs, i - 1, options.sourceStrategies);
+                policy = regenerateCursor(options.mergePolicy, segs, i - 1, fluid.concreteTrundler);
+            }
+            // var thisPolicy = fluid.derefMergePolicy(policy);
+            var newPolicyHolder = fluid.concreteTrundler(policy, name);
+            var newPolicy = fluid.derefMergePolicy(newPolicyHolder);
+
+            var start, limit, mul;
+            if (newPolicy.replace) {
+                start = 1 - sources.length; limit = 0; mul = -1;
+            }
+            else {
+                start = 0; limit = sources.length - 1; mul = +1;
+            }
+            var newSources = [];
+            var thisTarget = undefined;
+
+            for (var j = start; j <= limit; ++j) { // TODO: try to economise on this array and on gaps
+                var k = mul * j;
+                var thisSource = options.sourceStrategies[k](sources[k], name, i, segs); // Run the RH algorithm in "driving" mode
+                if (thisSource !== undefined) {
+                    newSources[k] = thisSource;
+                    if (oldTarget === undefined) {
+                        if (mul === -1) { // if we are going backwards, it is "replace"
+                            thisTarget = target[name] = thisSource;
+                            break;
+                        }
+                        else {
+                            // write this in early, since early expansions may generate a trunk object which is written in to by later ones
+                            thisTarget = target[name] = fluid.mergeOneImpl(thisTarget, thisSource, j, newSources, newPolicy, i, segs, options);
+                        }
+                    }
+                }
+            }
+            if (oldTarget !== undefined) {
+                thisTarget = oldTarget;
+            }
+            if (newSources.length > 0) {
+                if (!fluid.isPrimitive(thisTarget)) {
+                    fluid.fetchMergeChildren(thisTarget, i, segs, newSources, newPolicyHolder, options);
+                }
+            }
+            if (oldTarget === undefined && newSources.length === 0) {
+                delete target[name]; // remove the evaluation marker - nothing to evaluate
+            }
+            return thisTarget;
+        };
+        options.strategy = strategy;
+        return strategy;
+    };
+</textarea>
+<pre id="source-1676" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1676").value,
+    "application/javascript", document.getElementById("source-1676"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.makeRootDestroy">fluid.makeRootDestroy</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2164</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-2164">    fluid.makeRootDestroy = function (that) {
+        return function () {
+            fluid.fireEvent(that, "events.onClear", [that, "", null]);
+            fluid.fireEvent(that, "events.onDestroy", [that, "", null]);
+        };
+    };
+</textarea>
+<pre id="source-2164" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2164").value,
+    "application/javascript", document.getElementById("source-2164"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.mergeComponentOptions">fluid.mergeComponentOptions</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1885</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1885">    fluid.mergeComponentOptions = function (that, componentName, userOptions, localOptions) {
+        var rawDefaults = fluid.rawDefaults(componentName);
+        var defaults = fluid.getGradedDefaults(componentName, rawDefaults && rawDefaults.gradeNames ? null : localOptions.gradeNames);
+        var sharedMergePolicy = {};
+
+        var mergeBlocks = [];
+
+        if (fluid.expandComponentOptions) {
+            mergeBlocks = mergeBlocks.concat(fluid.expandComponentOptions(sharedMergePolicy, defaults, userOptions, that));
+        }
+        else {
+            mergeBlocks = mergeBlocks.concat([fluid.simpleGingerBlock(defaults, "defaults"), 
+                                              fluid.simpleGingerBlock(userOptions, "user")]);
+        }
+        var options = {}; // ultimate target
+        var sourceStrategies = [], sources = [];
+        var baseMergeOptions = {
+            target: options,
+            sourceStrategies: sourceStrategies
+        };
+        // Called both from here and from IoC whenever there is a change of block content or arguments which
+        // requires them to be resorted and rebound
+        var updateBlocks = function () {
+            mergeBlocks.sort(fluid.priorityComparator);
+            sourceStrategies.length = 0; sources.length = 0;
+            fluid.each(mergeBlocks, function (block) {
+                sourceStrategies.push(block.strategy);
+                sources.push(block.target);
+            });
+        };
+        updateBlocks();
+        var mergeOptions = fluid.makeMergeOptions(sharedMergePolicy, sources, baseMergeOptions);
+        mergeOptions.mergeBlocks = mergeBlocks;
+        mergeOptions.updateBlocks = updateBlocks;
+        mergeOptions.destroyValue = function (path) { // This method is a temporary hack to assist FLUID-5091
+            for (var i = 0; i < mergeBlocks.length; ++ i) {
+                fluid.destroyValue(mergeBlocks[i].target, path);
+            }
+            fluid.destroyValue(baseMergeOptions.target, path);
+        };
+        
+        // Decode the now available mergePolicy
+        var mergePolicy = fluid.driveStrategy(options, "mergePolicy", mergeOptions.strategy);
+        mergePolicy = $.extend({}, fluid.rootMergePolicy, mergePolicy);
+        var compiledPolicy = fluid.compileMergePolicy(mergePolicy);
+        // TODO: expandComponentOptions has already put some builtins here - performance implications of the now huge
+        // default mergePolicy material need to be investigated as well as this deep merge
+        $.extend(true, sharedMergePolicy, compiledPolicy.builtins); // ensure it gets broadcast to all sharers
+        
+        if (compiledPolicy.hasDefaults) {
+            if (fluid.generateExpandBlock) {
+                mergeBlocks.push(fluid.generateExpandBlock({
+                        options: compiledPolicy.defaultValues,
+                        recordType: "defaultValueMerge",
+                        priority: fluid.mergeRecordTypes.defaultValueMerge
+                    }, that, {}));
+                updateBlocks();
+            }
+            else {
+                fluid.fail("Cannot operate mergePolicy ", mergePolicy, " for component ", that, " without including FluidIoC.js");
+            }
+        }
+        that.options = options;
+        var optionsNickName = fluid.driveStrategy(options, "nickName", mergeOptions.strategy);
+        that.nickName = optionsNickName || fluid.computeNickName(that.typeName);
+        fluid.driveStrategy(options, "gradeNames", mergeOptions.strategy);
+        
+        fluid.deliverOptionsStrategy(that, options, mergeOptions); // do this early to broadcast and receive "distributeOptions"
+        
+        var transformOptions = fluid.driveStrategy(options, "transformOptions", mergeOptions.strategy);
+        if (transformOptions) {
+            fluid.transformOptionsBlocks(mergeBlocks, transformOptions, ["user", "subcomponentRecord"]);
+            updateBlocks(); // because the possibly simple blocks may have changed target
+        }
+                
+        fluid.computeComponentAccessor(that);
+
+        return mergeOptions;
+    };
+</textarea>
+<pre id="source-1885" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1885").value,
+    "application/javascript", document.getElementById("source-1885"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.mergeListeners">fluid.mergeListeners</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1203</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1203">    fluid.mergeListeners = function (that, events, listeners) {
+        fluid.each(listeners, function (value, key) {
+            var firer, namespace;
+            if (key.charAt(0) === "{") {
+                if (!fluid.expandOptions) {
+                    fluid.fail("fluid.expandOptions could not be loaded - please include FluidIoC.js in order to operate IoC-driven event with descriptor " +
+                        key);
+                }
+                firer = fluid.expandOptions(key, that);
+                if (!firer) {
+                    fluid.fail("Error in listener record: key " + key + " could not be looked up to an event firer - did you miss out \"events.\" when referring to an event firer?");
+                }
+            } else {
+                var keydot = key.indexOf(".");
+            
+                if (keydot !== -1) {
+                    namespace = key.substring(keydot + 1);
+                    key = key.substring(0, keydot);
+                }
+                if (!events[key]) {
+                    fluid.fail("Listener registered for event " + key + " which is not defined for this component");
+                }
+                firer = events[key];
+            }
+            var record = fluid.event.resolveListenerRecord(value, that, key, namespace);
+            fluid.event.addListenerToFirer(firer, record.records, namespace, record.adderWrapper);
+        });
+    };
+</textarea>
+<pre id="source-1203" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1203").value,
+    "application/javascript", document.getElementById("source-1203"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.mergeOneImpl">fluid.mergeOneImpl</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1590</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-1590">    fluid.mergeOneImpl = function (thisTarget, thisSource, j, sources, newPolicy, i, segs) {
+        var togo = thisTarget;
+
+        var primitiveTarget = fluid.isPrimitive(thisTarget);
+
+        if (thisSource !== undefined) {
+            if (!newPolicy.func && thisSource !== null && fluid.isPlainObject(thisSource) &&
+                    !fluid.isDOMish(thisSource) && thisSource !== fluid.VALUE &&
+                    !newPolicy.preserve && !newPolicy.nomerge) {
+                if (primitiveTarget) {
+                    togo = thisTarget = fluid.freshContainer(thisSource);
+                }
+                // recursion is now external? We can't do it from here since sources are not all known
+                // options.recurse(thisTarget, i + 1, segs, sources, newPolicyHolder, options);
+            } else {
+                sources[j] = undefined;
+                if (newPolicy.func) {
+                    togo = newPolicy.func.call(null, thisTarget, thisSource, segs[i - 1], segs, i); // NB - change in this mostly unused argument
+                } else {
+                    togo = fluid.isValue(thisTarget) && newPolicy.preserve ? fluid.model.mergeModel(thisTarget, thisSource) : thisSource;
+                }
+            }
+        }
+        return togo;
+    };
+</textarea>
+<pre id="source-1590" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1590").value,
+    "application/javascript", document.getElementById("source-1590"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.messageResolver.resolveOne">fluid.messageResolver.resolveOne</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2419</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-2419">    fluid.messageResolver.resolveOne = function (messageBase, messagecodes) {
+        for (var i = 0; i < messagecodes.length; ++i) {
+            var code = messagecodes[i];
+            var message = messageBase[code];
+            if (message !== undefined) {
+                return message;
+            }
+        }
+    };
+</textarea>
+<pre id="source-2419" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2419").value,
+    "application/javascript", document.getElementById("source-2419"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.accessSimple">fluid.model.accessSimple</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:832</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-832">    fluid.model.accessSimple = function (root, EL, newValue, environment, initSegs, returnSegs) {
+        return fluid.model.accessImpl(root, EL, newValue, environment, initSegs, returnSegs, fluid.model.traverseSimple);
+    };
+</textarea>
+<pre id="source-832" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-832").value,
+    "application/javascript", document.getElementById("source-832"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.pathToSegments">fluid.model.pathToSegments</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:807</li>
+</ul>
+<p><pre> unsupported, NON-API function   </pre></p>
+<textarea style="display:none;" id="hidden-source-807">    fluid.model.pathToSegments = function (EL, config) {
+        var parser = config && config.parser ? config.parser.parse : fluid.model.parseEL;
+        var segs = typeof(EL) === "number" || typeof(EL) === "string" ? parser(EL) : EL;
+        return segs;
+    };
+</textarea>
+<pre id="source-807" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-807").value,
+    "application/javascript", document.getElementById("source-807"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.resolvePathSegment">fluid.model.resolvePathSegment</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:795</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-795">    fluid.model.resolvePathSegment = function (root, segment, create, origEnv) {
+        if (!origEnv && root.resolvePathSegment) {
+            return root.resolvePathSegment(segment);
+        }
+        if (create && root[segment] === undefined) {
+            // This optimisation in this heavily used function has a fair effect
+            return root[segment] = {};
+        }
+        return root[segment];
+    };
+</textarea>
+<pre id="source-795" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-795").value,
+    "application/javascript", document.getElementById("source-795"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.model.traverseSimple">fluid.model.traverseSimple</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:837</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-837">    fluid.model.traverseSimple = function (root, segs, initPos, environment, uncess) {
+        var origEnv = environment;
+        var limit = segs.length - uncess;
+        for (var i = 0; i < limit; ++i) {
+            if (!root) {
+                return root;
+            }
+            var segment = segs[i];
+            if (environment && environment[segment]) {
+                root = environment[segment];
+            } else {
+                root = fluid.model.resolvePathSegment(root, segment, uncess === 1, origEnv);
+            }
+            environment = null;
+        }
+        return root;
+    };
+</textarea>
+<pre id="source-837" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-837").value,
+    "application/javascript", document.getElementById("source-837"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.parseSelector">fluid.parseSelector</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2298</li>
+</ul>
+<p><pre> unsupported, non-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-2298">    fluid.parseSelector = function (selstring, strategy) {
+        var togo = [];
+        selstring = $.trim(selstring);
+        //ws-(ss*)[ws/>]
+        var regexp = strategy.regexp;
+        regexp.lastIndex = 0;
+        var lastIndex = 0;
+        while (true) {
+            var atNode = []; // a list of predicates at a particular node
+            var first = true;
+            while (true) {
+                var segMatch = regexp.exec(selstring);
+                if (!segMatch) {
+                    break;
+                }
+                if (segMatch.index !== lastIndex) {
+                    if (first) {
+                        fluid.fail("Error in selector string - cannot match child selector expression starting at " + selstring.substring(lastIndex));
+                    }
+                    else {
+                        break;
+                    }
+                }
+                var thisNode = {};
+                var text = segMatch[2];
+                var targetTag = strategy.charToTag[segMatch[1]];
+                if (targetTag) {
+                    thisNode[targetTag] = text;
+                }
+                atNode[atNode.length] = thisNode;
+                lastIndex = regexp.lastIndex;
+                first = false;
+            }
+            childSeg.lastIndex = lastIndex;
+            var fullAtNode = {predList: atNode};
+            var childMatch = childSeg.exec(selstring);
+            if (!childMatch || childMatch.index !== lastIndex) {
+                fluid.fail("Error in selector string - can not match child selector expression at " + selstring.substring(lastIndex));
+            }
+            if (childMatch[1] === ">") {
+                fullAtNode.child = true;
+            }
+            togo[togo.length] = fullAtNode;
+            // >= test here to compensate for IE bug http://blog.stevenlevithan.com/archives/exec-bugs
+            if (childSeg.lastIndex >= selstring.length) {
+                break;
+            }
+            lastIndex = childSeg.lastIndex;
+            regexp.lastIndex = childSeg.lastIndex;
+        }
+        return togo;
+    };
+</textarea>
+<pre id="source-2298" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2298").value,
+    "application/javascript", document.getElementById("source-2298"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.priorityComparator">fluid.priorityComparator</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1003</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1003">    fluid.priorityComparator = function (recA, recB) {
+        return recA.priority - recB.priority;
+    };
+</textarea>
+<pre id="source-1003" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1003").value,
+    "application/javascript", document.getElementById("source-1003"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.pushActivity">fluid.pushActivity</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:118</li>
+</ul>
+<p><pre> unsupported, non-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-118">    fluid.pushActivity = function (type, message, args) {
+        var record = {type: type, message: message, args: args, time: new Date().getTime()};
+        if (fluid.activityTracing) {
+            fluid.activityTrace.push(record);
+        }
+        if (fluid.passLogLevel(fluid.logLevel.TRACE)) {
+            fluid.doLog(fluid.renderOneActivity(record, true));
+        }
+        var activityStack = fluid.getActivityStack();
+        activityStack.push(record);
+    };
+</textarea>
+<pre id="source-118" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-118").value,
+    "application/javascript", document.getElementById("source-118"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.rawDefaults">fluid.rawDefaults</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1442</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1442">    fluid.rawDefaults = function (componentName, options) {
+        if (options === undefined) {
+            return defaultsStore[componentName];
+        } else {
+            fluid.pushActivity("registerDefaults", "registering defaults for grade %componentName with options %options",
+                {componentName: componentName, options: options});
+            var optionsCopy = fluid.expandCompact ? fluid.expandCompact(options) : fluid.copy(options);
+            fluid.annotateListeners(componentName, optionsCopy);
+            defaultsStore[componentName] = optionsCopy;
+            gradeTickStore[componentName] = gradeTick++;
+            fluid.popActivity();
+        }
+    };
+</textarea>
+<pre id="source-1442" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1442").value,
+    "application/javascript", document.getElementById("source-1442"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.renderActivity">fluid.renderActivity</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:87</li>
+</ul>
+<p><pre> unsupported, non-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-87">    fluid.renderActivity = function (activityStack, renderer) {
+        renderer = renderer || fluid.renderOneActivity;
+        return fluid.transform(activityStack, renderer);
+    };
+</textarea>
+<pre id="source-87" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-87").value,
+    "application/javascript", document.getElementById("source-87"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.renderOneActivity">fluid.renderOneActivity</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:63</li>
+</ul>
+<p><pre> unsupported, non-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-63">    fluid.renderOneActivity = function (activity, nowhile) {
+        var togo = nowhile === true ? [] : ["    while "];
+        var message = activity.message;
+        var index = activityParser.lastIndex = 0;
+        while (true) {
+            var match = activityParser.exec(message);
+            if (match) {
+                var key = match[1].substring(1);
+                togo.push(message.substring(index, match.index));
+                togo.push(activity.args[key]);
+                index = activityParser.lastIndex;
+            }
+            else {
+                break;
+            }
+        }
+        if (index < message.length) {
+            togo.push(message.substring(index));
+        }
+        return togo;
+    };
+</textarea>
+<pre id="source-63" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-63").value,
+    "application/javascript", document.getElementById("source-63"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.requireDataBinding">fluid.requireDataBinding</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:788</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-788">    fluid.requireDataBinding = function () {
+        fluid.fail("Please include DataBinding.js in order to operate complex model accessor configuration");
+    };
+</textarea>
+<pre id="source-788" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-788").value,
+    "application/javascript", document.getElementById("source-788"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.resolveGrade">fluid.resolveGrade</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1382</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1382">    fluid.resolveGrade = function (defaults, defaultName, gradeNames) {
+        var gradeStruct = fluid.resolveGradeStructure(defaultName, gradeNames);
+        var mergeArgs = gradeStruct.optionsChain.reverse();
+        var mergePolicy = {};
+        for (var i = 0; i < mergeArgs.length; ++ i) {
+            if (mergeArgs[i] && mergeArgs[i].mergePolicy) {
+                mergePolicy = $.extend(true, mergePolicy, mergeArgs[i].mergePolicy);
+            }
+        }
+        mergeArgs = [mergePolicy, {}].concat(mergeArgs);
+        var mergedDefaults = fluid.merge.apply(null, mergeArgs);
+        mergedDefaults.gradeNames = gradeStruct.gradeChain;
+        if (fluid.hasGrade(defaults, "autoInit")) {
+            mergedDefaults.gradeNames.push("autoInit");
+        }
+        return {defaults: mergedDefaults, lastTick: gradeStruct && gradeStruct.lastTick};
+    };
+</textarea>
+<pre id="source-1382" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1382").value,
+    "application/javascript", document.getElementById("source-1382"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.resolveGradeStructure">fluid.resolveGradeStructure</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1359</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1359">    fluid.resolveGradeStructure = function (defaultName, gradeNames) {
+        var gradeStruct = {
+            lastTick: 0,
+            gradeChain: [],
+            gradeHash: {},
+            optionsChain: []
+        };
+        // stronger grades appear to the left in defaults - dynamic grades are stronger still - FLUID-5085
+        return resolveGradesImpl(gradeStruct, (gradeNames || []).concat([defaultName]), true);
+    };
+</textarea>
+<pre id="source-1359" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1359").value,
+    "application/javascript", document.getElementById("source-1359"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.simpleGingerBlock">fluid.simpleGingerBlock</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1793</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-1793">    fluid.simpleGingerBlock = function (source, recordType) {
+        var block = {
+            target: source,
+            simple: true,
+            strategy: fluid.concreteTrundler,
+            initter: fluid.identity,
+            recordType: recordType,
+            priority: fluid.mergeRecordTypes[recordType]
+        };
+        return block;
+    };
+</textarea>
+<pre id="source-1793" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1793").value,
+    "application/javascript", document.getElementById("source-1793"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.singleThreadLocal">fluid.singleThreadLocal</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1300</li>
+</ul>
+<p><pre> unsupported, non-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1300">    fluid.singleThreadLocal = function (initFunc) {
+        var value = initFunc();
+        return function (newValue) {
+            return newValue === undefined ? value : value = newValue;
+        };
+    };
+</textarea>
+<pre id="source-1300" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1300").value,
+    "application/javascript", document.getElementById("source-1300"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.transformOptions">fluid.transformOptions</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1826</li>
+</ul>
+<p><pre> unsupported, NON-API function</pre></p>
+<textarea style="display:none;" id="hidden-source-1826">    fluid.transformOptions = function (options, transRec) {
+        fluid.expect("Options transformation record", ["transformer", "config"], transRec);
+        var transFunc = fluid.getGlobalValue(transRec.transformer);
+        return transFunc.call(null, options, transRec.config);
+    };
+</textarea>
+<pre id="source-1826" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1826").value,
+    "application/javascript", document.getElementById("source-1826"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.transformOptionsBlocks">fluid.transformOptionsBlocks</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:1838</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-1838">    fluid.transformOptionsBlocks = function (mergeBlocks, transformOptions, recordTypes) {
+        fluid.each(recordTypes, function (recordType) {
+            var blocks = fluid.findMergeBlocks(mergeBlocks, recordType);
+            fluid.each(blocks, function (block) {
+                block[block.simple? "target": "source"] = fluid.transformOptions(block.source, transformOptions);
+            });
+        });
+    };
+</textarea>
+<pre id="source-1838" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-1838").value,
+    "application/javascript", document.getElementById("source-1838"));
+</script>
+<a href="#top">back to top</a>
+
+<h3><a name="fluid.updateWithDefaultLifecycle">fluid.updateWithDefaultLifecycle</a></h3>
+<ul>
+<li>Type: function</li>
+<li>File: Fluid.js:2118</li>
+</ul>
+<p><pre> unsupported, NON-API function    </pre></p>
+<textarea style="display:none;" id="hidden-source-2118">    fluid.updateWithDefaultLifecycle = function (key, value, typeName) {
+        var funcName = typeName + "." + key.substring(0, key.length - "function".length);
+        var funcVal = fluid.getGlobalValue(funcName);
+        if (typeof (funcVal) === "function") {
+            value = fluid.makeArray(value);
+            var existing = fluid.find(value, function (el) {
+                var listener = el.listener || el;
+                if (listener === funcVal || listener === funcName) {
+                    return true;
+                }
+            });
+            if (!existing) {
+                value.push(funcVal);
+            }
+        }
+        return value;
+    };
+</textarea>
+<pre id="source-2118" class="cm-s-default"></pre>
+<script>
+CodeMirror.runMode(document.getElementById("hidden-source-2118").value,
+    "application/javascript", document.getElementById("source-2118"));
+</script>
+<a href="#top">back to top</a>
+
+
+
+</body>
+</html>
