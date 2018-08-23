@@ -10,3 +10,5 @@
 ```bash
 kubectl -n gpii port-forward couchdb-0 5984
 ```
+
+On our AWS dev clusters, these secrets are stored in: `aws/modules/deploy/secrets/dev-sgithens.gpii.net-secrets.yml`
