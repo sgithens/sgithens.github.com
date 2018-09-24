@@ -36,3 +36,13 @@ latest: digest: sha256:f9fa332873bc78476a6543e5743c31a144cd19ff57f9be8eae529fedd
 kubectl delete svc/kubernetes
 rake
 ```
+
+## Random
+
+Disble Chrome Google Sign in and Sync
+https://blog.ideasynthesis.com/2018/09/24/Disable-Google-Chrome-Sign-In-and-Sync/
+
+```bash
+defaults write com.google.Chrome SyncDisabled -bool true
+defaults write com.google.Chrome RestrictSigninToPattern -string ".*@example.com"
+```
