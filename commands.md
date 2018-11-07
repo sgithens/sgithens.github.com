@@ -1,5 +1,13 @@
 # Useful Commands
 
+## Setting up a local couchdb instance
+
+Simply run the following in a directory where the data should be persisted, or swap out the pwd to set up a number of development and testing images. 
+
+```bash
+docker run -p 5985:5984 -v $(pwd):/opt/couchdb/data -d couchdb:2.2
+```
+
 ## GPII Cloud Stuff
 
 ### Amazon Console Login
