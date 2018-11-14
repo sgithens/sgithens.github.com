@@ -45,6 +45,16 @@ kubectl delete svc/kubernetes
 rake
 ```
 
+## MySQL
+
+```bash
+create user username@hostname;
+set password for 'username'@'hostname' = PASSWORD('*******');
+create schema myschema default character set 'utf8';
+grant all privileges on myschema.* to 'username'@'hostname';
+show grants for 'username'@'hostname';
+```
+
 ## Random
 
 Disble Chrome Google Sign in and Sync
