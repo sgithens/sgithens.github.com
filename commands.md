@@ -1,5 +1,11 @@
 # Useful Commands
 
+## Docker
+Run a command in a running container
+```bash
+docker exec -it 418e3c7099b6 ls a/random/path
+```
+
 ## Setting up a local couchdb instance
 
 Simply run the following in a directory where the data should be persisted, or swap out the pwd to set up a number of development and testing images. 
