@@ -1,5 +1,11 @@
 # Useful Commands
 
+## Sending output to both the shell and a file
+```
+# The command here is just simple `rake`
+rake 2>&1 | tee out.txt
+```
+
 ## Docker
 Run a command in a running container
 ```bash
