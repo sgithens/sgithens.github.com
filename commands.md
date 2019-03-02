@@ -12,6 +12,13 @@ Run a command in a running container
 docker exec -it 418e3c7099b6 ls a/random/path
 ```
 
+Rebuild `gpii` repos and push up to hub
+```bash
+docker build . -t gpii-devpmt
+docker tag gpii-devpmt sgithens/gpii-devpmt:latest
+docker push docker.io/sgithens/gpii-devpmt:latest
+```
+
 ## Setting up a local couchdb instance
 
 Simply run the following in a directory where the data should be persisted, or swap out the pwd to set up a number of development and testing images. 
