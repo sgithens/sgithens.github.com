@@ -29,6 +29,16 @@ docker run -p 5984:5984 -v $(pwd):/opt/couchdb/data -d couchdb:2.2
 
 ## GPII Cloud Stuff
 
+### GCP 
+
+#### Force delete / rm a bucket
+
+https://stackoverflow.com/questions/29840033/fast-way-of-deleting-non-empty-google-bucket
+```bash
+
+gsutil -m rm -r gs://my-bucket
+```
+
 ### Amazon Console Login
 
 `https://gpii-net.signin.aws.amazon.com/console`
