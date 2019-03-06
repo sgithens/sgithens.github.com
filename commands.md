@@ -31,6 +31,23 @@ docker run -p 5984:5984 -v $(pwd):/opt/couchdb/data -d couchdb:2.2
 
 ### GCP 
 
+#### Fire up an alpine container to do debugging sluething in...
+
+in this example testing out the redis service. Some serious Escher nesting of containers.
+
+```bash
+
+rake plain_sh
+
+# Now we're in execube
+kubectl run -i -t alpine --image=alpine --restart=Never
+
+# Now we're in the cluster alpine pod
+ping preferences.gpii.svc.cluster.local
+apk add redis
+redis-cli -h redis-master.gpii.svc.cluster.local -a **********
+```
+
 #### Force delete / rm a bucket
 
 https://stackoverflow.com/questions/29840033/fast-way-of-deleting-non-empty-google-bucket
