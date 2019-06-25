@@ -1,5 +1,10 @@
 # Useful Commands
 
+## Getting all the dev releases and other info from an npm module
+```
+npm info --json gpii-express-user 
+```
+
 ## Sending output to both the shell and a file
 ```
 # The command here is just simple `rake`
