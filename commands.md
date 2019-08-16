@@ -11,6 +11,13 @@ npm info --json gpii-express-user
 rake 2>&1 | tee out.txt
 ```
 
+## Renewing the windows 10 eval VM license
+
+```
+# In powershell as administrator
+slmgr /rearm
+```
+
 ## Docker
 Run a command in a running container
 ```bash
