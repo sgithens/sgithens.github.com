@@ -3,6 +3,7 @@
 ## git
 
 ```bash
+# https://sethrobertson.github.io/GitFixUm/fixup.html#remove_deep
 # Removing a branch that was merged in accidentally for a PR (ie. don't edit history on actual shared branches)
 git reset --hard @{u}
 git rebase -p --onto 6a6bcf622534a69be58d7948c8c5e04055e7df60^ 6a6bcf622534a69be58d7948c8c5e04055e7df60
