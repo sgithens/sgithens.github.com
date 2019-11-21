@@ -4,7 +4,8 @@
 
 ```bash
 # Removing a branch that was merged in accidentally for a PR (ie. don't edit history on actual shared branches)
-git reset --hard @{u}; git rebase -p --onto 6a6bcf622534a69be58d7948c8c5e04055e7df60^ 6a6bcf622534a69be58d7948c8c5e04055e7df60
+git reset --hard @{u}
+git rebase -p --onto 6a6bcf622534a69be58d7948c8c5e04055e7df60^ 6a6bcf622534a69be58d7948c8c5e04055e7df60
 git rebase -p --onto 9e615a2ddef65590b4b3e1a6e35ce159e0a57041^ 9e615a2ddef65590b4b3e1a6e35ce159e0a57041
 git rebase -p --onto 2dba6dad9546dccab704438855f5c35cc8aa9036^ 2dba6dad9546dccab704438855f5c35cc8aa9036
 git fetch GPII; git merge GPII/master
