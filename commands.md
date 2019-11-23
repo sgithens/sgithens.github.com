@@ -13,6 +13,13 @@ git fetch GPII; git merge GPII/master
 git push -f sgithens gpii-228-2018
 ```
 
+## Simple local webserver
+
+```python
+#python2
+python -m SimpleHTTPServer 5000
+```
+
 ## Getting all the dev releases and other info from an npm module
 ```
 npm info --json gpii-express-user 
