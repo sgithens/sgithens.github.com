@@ -1,5 +1,11 @@
 # Useful Commands
 
+## Infusion
+
+```javascript
+fluid.logObjectRenderChars = 8000;
+```
+
 ## git
 
 ```bash
@@ -13,6 +19,30 @@ git fetch GPII; git merge GPII/master
 git push -f sgithens gpii-228-2018
 ```
 
+## GPII Development
+
+### Working on Universal and Windows Side by Side
+
+```bash
+# Windows and Universal Side by side
+$ ls
+gpii-universal	windows
+# When Changes are made in universal, just rsync back in to windows to avoid having to push all
+# the way up to github during work on acceptance tests and what not
+$ rsync -avzh gpii-universal/ windows/node_modules/gpii-universal
+```
+
+## Debugging gpii with the chrome devtools
+
+Start the windows, universal, or whatever repo with --inspect and look it up from `about://inspect`
+
+```bash
+node --inspect gpii.js
+# In the chrome bar
+about://inspect
+# Down the page there should be a link to the running node instance
+```
+
 ## Simple local webserver
 
 ```python
@@ -22,13 +52,29 @@ python -m SimpleHTTPServer 5000
 
 ## Getting all the dev releases and other info from an npm module
 ```
-npm info --json gpii-express-user 
+npm info --json gpii-express-user
 ```
 
 ## Sending output to both the shell and a file
-```
+```bash
 # The command here is just simple `rake`
 rake 2>&1 | tee out.txt
+```
+
+On windows powershell
+```powershell
+# `npm test` is the command
+X:\windows> npm test | Tee-Object -FilePath ./output.txt
+```
+
+Powershell regular redirection.
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_redirection
+
+```powershell
+# All output to a file
+.\script.ps1 *> script.log
+# Errors and output to a file
+npm test 2>&1 > .\dir.log
 ```
 
 ## Renewing the windows 10 eval VM license
@@ -53,7 +99,7 @@ docker push docker.io/sgithens/gpii-devpmt:latest
 
 ## Setting up a local couchdb instance
 
-Simply run the following in a directory where the data should be persisted, or swap out the pwd to set up a number of development and testing images. 
+Simply run the following in a directory where the data should be persisted, or swap out the pwd to set up a number of development and testing images.
 
 ```bash
 docker run -p 5984:5984 -v $(pwd):/opt/couchdb/data -d couchdb:2.2
@@ -61,7 +107,7 @@ docker run -p 5984:5984 -v $(pwd):/opt/couchdb/data -d couchdb:2.2
 
 ## GPII Cloud Stuff
 
-### GCP 
+### GCP
 
 #### Fire up an alpine container to do debugging sluething in...
 
