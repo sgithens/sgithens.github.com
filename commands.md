@@ -105,9 +105,43 @@ Simply run the following in a directory where the data should be persisted, or s
 docker run -p 5984:5984 -v $(pwd):/opt/couchdb/data -d couchdb:2.2
 ```
 
+### Backing up local couch db for dev and migration testing
+
+We can stop couch, cp the data dir as a backup, and restart it.
+
+```bash
+# Stop couch
+cp -R ./couch-db-data ./couch-db-data-BEFORE-TEST
+# Start couch
+
+# To go back to the old version, completely remove the first dir and restore
+# the backup
+# Stop Couch
+rm -fR ./couch-db-data
+cp -R ./couch-db-data-BEFORE-TEST ./couch-db-data
+# Start Couch
+```
+
 ## GPII Cloud Stuff
 
 ### GCP
+
+#### Spinning up the user-acounts test cluster
+
+January 3, 2020 12:39 PM
+
+```bash
+# Building the user-accounts setup
+cd universal
+# rm -fR node_modules build
+docker build --rm -t sgithens/universal:GPII-2966-$(git rev-parse --short HEAD) .
+docker push docker.io/sgithens/universal:GPII-2966-2f365c41
+
+cd ../gpii-devpmt
+rm -fR node_modules reports coverage
+docker build --rm -t sgithens/gpii-devpmt:user-accounts-$(git rev-parse --short HEAD) .
+docker push docker.io/sgithens/gpii-devpmt:user-accounts-e950c2d
+```
 
 #### Fire up an alpine container to do debugging sluething in...
 
