@@ -21,6 +21,10 @@ git push -f sgithens gpii-228-2018
 
 ## GPII Development
 
+### Grepping for Atkins SR warnings
+
+`egrep -nR 'WARN.*com\.freedomscientific\.jaws' out3.txt`
+
 ### Working on Universal and Windows Side by Side
 
 ```bash
