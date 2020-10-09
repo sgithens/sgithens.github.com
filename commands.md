@@ -19,6 +19,13 @@ git fetch GPII; git merge GPII/master
 git push -f sgithens gpii-228-2018
 ```
 
+Commiting only certain hunks from a file, with prompts for each hunk:
+
+```bash
+# https://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git
+git add --patch filename.js
+```
+
 ## GPII Development
 
 ### Working on Universal and Windows Side by Side
@@ -125,6 +132,12 @@ cp -R ./couch-db-data-BEFORE-TEST ./couch-db-data
 ## GPII Cloud Stuff
 
 ### GCP
+
+#### Running the cluster CouchDB Fauxton locally
+
+```bash
+rake couchdb_ui
+```
 
 #### Spinning up the user-acounts test cluster
 

@@ -1,0 +1,2221 @@
+{
+    "type": "box",
+    "name": "WORLD",
+    "rows": [
+        [
+            {
+                "type": "box",
+                "name": "DB",
+                "rows": [
+                    [
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interface"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "standard"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 4 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#1"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "Crash on starting up Boxer, creating and expanding a box"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "1. Start up Sunrise Boxer",
+                                                "2. Make a new datra box (left curly bracket keystroke)",
+                                                "3. Click on upper right corner to expand",
+                                                "--> Crash"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            [
+                                                "Error: No applicable methods for #<STANDARD-GENERIC-FUNCTION CLOS:SLOT-VALUE-USING-CLASS 40E03AED4C> with args (#<BUILT-IN-CLASS NULL 40C053EF03> NIL BOXER::SCROLL-X-OFFSET)",
+                                                "  1 (continue) Call #<STANDARD-GENERIC-FUNCTION CLOS:SLOT-VALUE-USING-CLASS 40E03AED4C> again",
+                                                "  2 (abort) Return to Cocoa Event Loop",
+                                                "Type :b for backtrace or :c <option number> to proceed.",
+                                                "Type :bug-form \"<subject>\" for a bug report template or :? for other options.",
+                                                "CL-USER 1 : 1 > :b",
+                                                "Call to ERROR",
+                                                "Call to CERROR",
+                                                "Call to (METHOD NO-APPLICABLE-METHOD (T))",
+                                                "Call to CLOS::GENERIC-FUNCTION-NON-DISCRIMINATOR",
+                                                "Call to CLOS::APPLY-NO-APPLICABLE-METHOD",
+                                                "Call to (METHOD BOXER::REPAINT-PASS-1-SR (BOXER::SCREEN-ROW T T))",
+                                                "Call to (METHOD BOXER::REPAINT-INFERIORS-PASS-1-SB (BOXER::SCREEN-BOX T T))",
+                                                "Call to (METHOD BOXER::REPAINT-PASS-1-SB (BOXER::SCREEN-BOX T T))",
+                                                "Call to BOXER::REPAINT-GUTS",
+                                                "Call to BOXER::REPAINT-WINDOW",
+                                                "Call to BOXER::REPAINT-INTERNAL",
+                                                "Call to (METHOD MP:GENERAL-HANDLE-EVENT (CAPI::EXECUTE-WITH-INTERFACE-EVENT))",
+                                                "Call to MP::CALL-GENERAL-HANDLE-EVENT",
+                                                "Call to MP:PROCESS-ALL-EVENTS",
+                                                "Call to CAPI-COCOA-LIBRARY::COCOA-EVENT-LOOP-PROCESS-LISP-EVENTS",
+                                                "Call to (SUBFUNCTION CAPI-COCOA-LIBRARY::|%FOREIGN-CALLABLE/CAPI_COCOA_LIBRARY APPLICATION_DELEGATE ObjC instance method _CAPIexecuteLispEvents| (FLI:DEFINE-FOREIGN-CALLABLE \"CAPI_COCOA_LIBRARY APPLICATION_DELEGATE ObjC instance method _CAPIexecuteLispEvents\"))",
+                                                "Call to OBJC::|invoke (FUNCTION (OBJC-OBJECT-POINTER SEL) VOID)|",
+                                                "Call to (SUBFUNCTION 2 OBJC::MAKE-INVOKE-FUNCTION)",
+                                                "Call to OBJC::INVOKE-INTO*",
+                                                "Call to CAPI-COCOA-LIBRARY::RUN-COCOA-EVENT-LOOP",
+                                                "Call to MP::PROCESS-SG-FUNCTION",
+                                                "Call to MP::RUN-MAIN-PROCESS-ONCE",
+                                                "Call to MP::MULTIPROCESSING-MAIN-LOOP",
+                                                "Call to MP::SHARED-INITIALIZE-MULTIPROCESSING",
+                                                "Call to MP:INITIALIZE-MULTIPROCESSING"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interface"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "standard"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 4 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#2"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "Keybindings: We should aim for having both control- and command- keystrokes",
+                                                "work properly. Previously, because of LispWorks limitations, command keystrokes could not",
+                                                "be passed to Boxer. So, a box called command-a-key would only be activated",
+                                                "on pressing control-a-key. I think command keys stilll can't be directly bound. Is that still",
+                                                "a LispWorks limitation?"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                {
+                                                    "type": "box",
+                                                    "name": "command-a-key",
+                                                    "rows": [
+                                                        [
+                                                            "command-a-key"
+                                                        ]
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "box",
+                                                    "name": "control-a-key",
+                                                    "rows": [
+                                                        [
+                                                            "cntrl-a-key"
+                                                        ]
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "box",
+                                                    "name": "test here",
+                                                    "rows": [
+                                                        [
+                                                            "<press command a key, then control-a-key>"
+                                                        ]
+                                                    ]
+                                                }
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "backtrace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "feature .. interface"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 4 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#3"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "It would be nice to have scrolling operated with trackpad and mouse actions.",
+                                                "On my trackpad, I use two-finger vertical swipe to scroll. I don't use a mouse."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "backtrace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interface"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 4 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#4"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "Weird control-key bug with \"self\"",
+                                                "I thought it might be the transparent (\"export names box\"),",
+                                                "But I don't think so, now.",
+                                                "maybe something to do with the fact that control-d comes",
+                                                "pre-defined in Boxer (delete one character right)."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "IN THIS DB BOX.",
+                                                "for some reason, cntrl-d key (defined here, in \"helpers\") just bombs Boxer",
+                                                "<Press the cntrl-d-key here>"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "backtrace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interpreter"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 4 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#5"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "set-scroll-row does not work for boxes that have been changed in the interpreter BEFORE YOU",
+                                                "HAVE RETURNED TO TOP LEVEL."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "The box \"stuff\" has a set of numbered rows. The doit box below it adds a new row and tries to set the scroll row to 5. It fails,",
+                                                "and instead just returns the scroll-to row to 1.",
+                                                "If you execute the commands in the doit box one at a time (thus returning to top level BEFORE doing the scroll) all is well.",
+                                                "(It seems that changing a box sets the scroll row back to 1. Not obviously the thing to do, but maybe necessary in the",
+                                                "current implementation).",
+                                                {
+                                                    "type": "box",
+                                                    "name": "stuff",
+                                                    "rows": [
+                                                        [
+                                                            "1",
+                                                            "2",
+                                                            "3",
+                                                            "4",
+                                                            "5",
+                                                            "6",
+                                                            "7",
+                                                            "8",
+                                                            "9",
+                                                            "10"
+                                                        ]
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "box",
+                                                    "name": "n",
+                                                    "rows": [
+                                                        [
+                                                            "10"
+                                                        ]
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "box",
+                                                    "name": "Un-Named",
+                                                    "rows": [
+                                                        [
+                                                            "change n n + 1",
+                                                            "append-row n stuff",
+                                                            "set-scroll-row stuff 5   "
+                                                        ]
+                                                    ]
+                                                }
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "backtrace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            [
+                                                "One rationale NOT to force creating an editor box on the fly is that it",
+                                                "might be expensive. But, scrolling is generally an interface operation",
+                                                "and won't be performed much in the midst of other code, so few people",
+                                                "will run into this expense.",
+                                                "It's also possible that for some reason you can't create a full editor box",
+                                                "on the fly. I woulodn't know. --Andy"
+                                            ]
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. display"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "standard"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 5 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#6"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "Fonts still don't save properly. I haven't tested",
+                                                "exensively, but the demo in \"reproduce\" shows",
+                                                "one case."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "Here's a test sequence",
+                                                "without font changes:",
+                                                "NOW IS THE",
+                                                "wtht font changes -- middle word in bold",
+                                                "NOW IS THE",
+                                                "Since the file was saved, you will see that bold results",
+                                                "in changing font size, and it extends beyond the bolded range."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "backtrace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interpreter"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 6 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#7"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "The command boxer-version crashes Boxer",
+                                                "Here's what it reported in 2014 Boxer:",
+                                                {
+                                                    "type": "box",
+                                                    "name": "Un-Named",
+                                                    "rows": [
+                                                        [
+                                                            "Boxer version 3.2 Public OPENGL Release",
+                                                            "6.1.1 LispWorks",
+                                                            "x86 Andys-MacBook-Air.local"
+                                                        ]
+                                                    ]
+                                                }
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "execute: boxer-version"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "backtrace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. file"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "high"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 6 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#8"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "Some graphics does not get saved correctly.",
+                                                "Here's an example of a button, saved then re-read.",
+                                                " ",
+                                                {
+                                                    "type": "box",
+                                                    "name": "Un-Named",
+                                                    "rows": [
+                                                        []
+                                                    ]
+                                                },
+                                                "Under as-yet undetermined conditions, this creates",
+                                                "bugs (crash) in saving file. Read the Button Factury tool",
+                                                "(created and saved in Boxer 2014) into Sunrise Boxer,",
+                                                "and try to save it.",
+                                                "(NB: There are two \"template\" boxes in the closet of the",
+                                                "Button Factory. Bar (I think) is the \"canvas\" on which",
+                                                "the new burtton shape is created. Then, I think there's a button",
+                                                "all set up--waiting to have it's boxtop changed--that is then copied",
+                                                "to return a separate working button.)",
+                                                "It's also true that closing a box with one of these mucked ",
+                                                "graphics boxes as a boxtop seems to crash Boxer. Not",
+                                                "tested for reliable reproduction"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "Use the botton factory tool to make a button in Sunrise Boxer.",
+                                                "Then save the button, and reload.",
+                                                "Crashes: One reliable one seems to be just loading the Boxer",
+                                                "2014 Button Factory into Sunrise Boxer, and then just trying to save."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "backtrace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. self"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "high"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 26 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#9"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "\"self\" sort of works, but returns an unrunnable object"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "Here you'll see that self appears to work,",
+                                                "but If I try to run the returned object, it crashes.",
+                                                "The final two lines here crash",
+                                                {
+                                                    "type": "box",
+                                                    "name": "foo",
+                                                    "rows": [
+                                                        [
+                                                            {
+                                                                "type": "box",
+                                                                "name": "bar",
+                                                                "rows": [
+                                                                    [
+                                                                        "2"
+                                                                    ]
+                                                                ]
+                                                            },
+                                                            "1"
+                                                        ]
+                                                    ]
+                                                },
+                                                "ask foo  self   |",
+                                                {
+                                                    "type": "box",
+                                                    "name": "Un-Named",
+                                                    "rows": [
+                                                        [
+                                                            {
+                                                                "type": "box",
+                                                                "name": "bar",
+                                                                "rows": [
+                                                                    [
+                                                                        "2"
+                                                                    ]
+                                                                ]
+                                                            },
+                                                            "1"
+                                                        ]
+                                                    ]
+                                                },
+                                                "ask foo.bar self   |",
+                                                {
+                                                    "type": "box",
+                                                    "name": "Un-Named",
+                                                    "rows": [
+                                                        [
+                                                            "2"
+                                                        ]
+                                                    ]
+                                                },
+                                                "run foo   |",
+                                                {
+                                                    "type": "box",
+                                                    "name": "Un-Named",
+                                                    "rows": [
+                                                        [
+                                                            "1"
+                                                        ]
+                                                    ]
+                                                },
+                                                "run foo.bar   |",
+                                                {
+                                                    "type": "box",
+                                                    "name": "Un-Named",
+                                                    "rows": [
+                                                        [
+                                                            "2"
+                                                        ]
+                                                    ]
+                                                },
+                                                "ask foo run self",
+                                                "ask foo.bar run self"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "backtrace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            [
+                                                "Any action buttons in boxer not only relies on graphics with text (bug 8)",
+                                                "but also on being able to run stuff produced with self. So, it's also in the way",
+                                                "of gettning very many of my tools to work, including database tools.",
+                                                "Not high priority for general Boxer users, but it's in the way of work I'm",
+                                                "trying to do (get this database of bugs and features in  a usable form."
+                                            ]
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. mouse-box"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 26 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#10"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "none of the mouse-box commands seem to work",
+                                                "They are supposed to return a port to the box in which the cursor resides.",
+                                                "Versions:",
+                                                "Mouse-box",
+                                                "mouse-box-on-click - returns a port to the next box that you click in. Useful for tools that act ",
+                                                "on generic boxer structure, such as selecting data to process with a tool.",
+                                                "mouce-box-on-release - same sort of thing, but the \"activate\" signal is a relese, not a click."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "Try these:",
+                                                "mouse-box",
+                                                "mouse-box-on-click ",
+                                                {
+                                                    "type": "box",
+                                                    "name": "Un-Named",
+                                                    "rows": [
+                                                        [
+                                                            "test box to click on after",
+                                                            "executiing mouse-box-on-click"
+                                                        ]
+                                                    ]
+                                                }
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "backtrace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            [
+                                                "Maybe related to self bugs (#9) but crashes",
+                                                "before a self reference is likely to have been made."
+                                            ]
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interface"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "|Wednesday September 30 2020 13:38:44 PDT"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#11"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "This one is tricky to reproduce. But, on starting up",
+                                                "a click (not a long press) on an open box results in a crash.",
+                                                "It does not happen if you get almost anything done in Boxer",
+                                                "before you take this acrtion. And, I have been unable to",
+                                                "produce a smiplified version of the context of the bug."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "Read the fle \"clicker warehouse testing\"",
+                                                "Click on the icon to open the box.",
+                                                "Click (not press) on the upper right corner of the \"super condition clicker\" box as if to open to full screen",
+                                                "--> Crash",
+                                                "I am sending the file separately because I'm beginning to worry about currupting the db-only database,",
+                                                "thus losing  entries."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interpreter"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "medium"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "Reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 30 2020"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#12"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "This is a reliable crash. (See \"reproduce\")",
+                                                "The two clicker conditions check+ and check- cause",
+                                                "a crash when check-all is executed. I'm guessing this is",
+                                                "because these procedures terminate with by popping the",
+                                                "stack up to check-all, with either true or false as returned values.",
+                                                "True is the value that causes a crash. I don't think false crashes.",
+                                                "(Might be that false does not pop the stack with \"stop\")"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "Load the file  \"Super Condition Bug\"",
+                                                "Then just execute the try: at the bottom,",
+                                                "This runs check-all on the one and only condition in the restrictions box."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            [
+                                                "If you have any trouble interpretijng how the clickers work, just ask.",
+                                                "I might be able to easily explain things that are not apparent.",
+                                                "I might also be able to simplify the crash conditions so that you don't",
+                                                "need to understand much about clickers to see what's going on.",
+                                                "Let me know."
+                                            ]
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interface .. magic keys"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "medium"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "September 30 2020"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#13"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "Boxer has a way of allowing the user to re-define almost any interface actions,",
+                                                "like pressing a key or doing various kinds of mouse-clicks. You just define a function",
+                                                "with a \"magic name,\" like mouse-click or a-key.  However, all the mouse",
+                                                "redefinitions seem to be broken. They either return a \"weird objec\" or flatly crash Boxer.",
+                                                "On the other hand, re-defining keystrokes seems to work (except we're still stuck without",
+                                                "proper command- and cntrl- options. At last sight, you had to define command keys using",
+                                                "cntrl- in the name, and you could not define command keys at all. Ed said this was",
+                                                "a LispWorks bug, but surely that must be fixed by now.",
+                                                "I looked at some instances how I used like \"mouse-click\" and it seems they expected the ordinary",
+                                                "action of a mouse click to be executed. In the case of  \"mouse-click\",  the cursor should be moved",
+                                                "to where the mouse is clicked.",
+                                                "In any case, these commands ertainly should not crash or return a weird object."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                {
+                                                    "type": "box",
+                                                    "name": "mouse-click keys listing",
+                                                    "rows": [
+                                                        [
+                                                            "Most seem to just crash when executed, but a few (e.g. MOUSE-CLICK) return some weird object.",
+                                                            "COMMAND-MOUSE-CLICK-->  crash on executing",
+                                                            "COMMAND-MOUSE-CLICK-ON-GRAPHICS --> crash on executing",
+                                                            "MOUSE-CLICK --> returns   |Weird object: NIL",
+                                                            {
+                                                                "type": "box",
+                                                                "name": "Untested mouse-click commands",
+                                                                "rows": [
+                                                                    [
+                                                                        "COMMAND-MOUSE-CLICK-ON-BOTTOM-RIGHT",
+                                                                        "OPTION-MOUSE-CLICK-ON-TOP-RIGHT",
+                                                                        "MOUSE-CLICK-ON-GRAPHICS",
+                                                                        "MOUSE-CLICK-ON-NAME",
+                                                                        "MOUSE-CLICK-ON-NAME-HANDLE",
+                                                                        "MOUSE-CLICK-ON-BOTTOM-RIGHT",
+                                                                        "COMMAND-MOUSE-CLICK-ON-TYPE",
+                                                                        "MOUSE-CLICK-ON-TYPE",
+                                                                        "OPTION-MOUSE-CLICK-ON-SCROLL-BAR",
+                                                                        "OPTION-MOUSE-CLICK",
+                                                                        "COMMAND-MOUSE-CLICK-ON-SCROLL-BAR",
+                                                                        "COMMAND-MOUSE-CLICK-ON-TOP-RIGHT is a primitive with no arguments",
+                                                                        "MOUSE-CLICK-ON-BOTTOM-LEFT is a primitive with no arguments",
+                                                                        "OPTION-MOUSE-CLICK-ON-BOTTOM-RIGHT is a primitive with no arguments",
+                                                                        "MOUSE-CLICK-ON-SPRITE is a primitive with no arguments",
+                                                                        "MOUSE-CLICK-ON-SCROLL-BAR is a primitive with no arguments",
+                                                                        "MOUSE-CLICK-ON-TOP-RIGHT is a primitive with no arguments",
+                                                                        "COMMAND-MOUSE-CLICK-ON-BOTTOM-LEFT is a primitive with no arguments",
+                                                                        "OPTION-MOUSE-CLICK-ON-GRAPHICS is a primitive with no arguments",
+                                                                        "OPTION-MOUSE-CLICK-ON-TOP-LEFT is a primitive with no arguments",
+                                                                        "MOUSE-CLICK-ON-TOP-LEFT is a primitive with no arguments",
+                                                                        "MOUSE-CLICK is a primitive with no arguments",
+                                                                        "COMMAND-MOUSE-CLICK-ON-TOP-LEFT is a primitive with no arguments"
+                                                                    ]
+                                                                ]
+                                                            }
+                                                        ]
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "box",
+                                                    "name": "other magic keys",
+                                                    "rows": [
+                                                        [
+                                                            "I didn't do a thorough testing, but mostly they seem to work.",
+                                                            "For example a-key causes an a to appear at the cursor:",
+                                                            "Try: a-key  ",
+                                                            {
+                                                                "type": "box",
+                                                                "name": "b-key",
+                                                                "rows": [
+                                                                    [
+                                                                        "here's a value to return from typing a b"
+                                                                    ]
+                                                                ]
+                                                            },
+                                                            "Type a \"b\" here:  "
+                                                        ]
+                                                    ]
+                                                }
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "feature - paste"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "Saturday October 3 2020"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#14"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "The current paste regimin has \"paste\" separate from \"paste from clipboard\".",
+                                                "That is, there are to clipboards, one for Boxer clippings and one for outside-of-Boxer",
+                                                "clippings. I'm thinking this is just less converntional, and often complicated than",
+                                                "having a single \"paste.\" Paste-graphics is also a separate action. Offhand, I think it'd",
+                                                "be better to unify all into a sigle paste. Granted it might be technically slightly more compicated",
+                                                "to implement (have to identify graphics in some cut and separately turn them into graphics boxes)",
+                                                "but this doesn't sound hard. I'm open to debate on this."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interpreter"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "Monday October 5 2020"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#15"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "Weird bug: I mistyped 2 ** 3 (exponential infix) as 2** 3.",
+                                                "It does not crash Boxer by itself, but does in a configuration",
+                                                "such as 1 / 2** 3"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "No-crash: 2** 3",
+                                                "Crash: 1 / 2** 3"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "interpreter .. circular ports"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "Monday October 5 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#16"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "\"circular ports\" don't seem to work anymore. Noq they cause a hard crash.",
+                                                "Previously, boxer showed a few levels of the recursion,",
+                                                "with a nested-box icon that could be clicked on to show more."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "Make a port IN the following box, and target it",
+                                                "toward that box.",
+                                                {
+                                                    "type": "box",
+                                                    "name": "Un-Named",
+                                                    "rows": [
+                                                        [
+                                                            "Make port here:",
+                                                            "Select this box here, as target."
+                                                        ]
+                                                    ]
+                                                }
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "feature .. missing"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "low"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "Monday October 5 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#17"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "Making ports is missing a change in cursor during the mode for selecting the target of the box.",
+                                                "Maybe a little target icon? I also think we could edit the text in the created port to be a little",
+                                                "more explantory.",
+                                                "Changing cursor used to be a Boxer command, to aid in creating more self-explantory microworld",
+                                                "interfaces."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interpreter"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "medium"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "Monday October 5 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#18"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "I think you've already noticed this, but commands without inputs crash"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                "try: word"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "name": "Un-Named",
+                            "rows": [
+                                [
+                                    {
+                                        "type": "box",
+                                        "name": "category",
+                                        "rows": [
+                                            [
+                                                "bug .. interpreter"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "priority",
+                                        "rows": [
+                                            [
+                                                "medium"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "status",
+                                        "rows": [
+                                            [
+                                                "reported"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "date",
+                                        "rows": [
+                                            [
+                                                "Monday October 5 2020 "
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "system",
+                                        "rows": [
+                                            [
+                                                "Sunrise Boxer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "index",
+                                        "rows": [
+                                            [
+                                                "#19"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "explanation",
+                                        "rows": [
+                                            [
+                                                "Changing variables that are inferior  to some box",
+                                                "just crashes Boxer under certain conditions. I think",
+                                                "The \"reproduce\" box is the best that I can do at narrowing",
+                                                "down the conditions."
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "reproduce",
+                                        "rows": [
+                                            [
+                                                {
+                                                    "type": "box",
+                                                    "name": "db-template",
+                                                    "rows": [
+                                                        [
+                                                            {
+                                                                "type": "box",
+                                                                "name": "date",
+                                                                "rows": [
+                                                                    []
+                                                                ]
+                                                            }
+                                                        ]
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "box",
+                                                    "name": "updated-template",
+                                                    "rows": [
+                                                        [
+                                                            {
+                                                                "type": "box",
+                                                                "name": "Un-Named",
+                                                                "rows": [
+                                                                    [
+                                                                        "input temp",
+                                                                        "change temp.date items 1 4 items-and-time",
+                                                                        "temp"
+                                                                    ]
+                                                                ]
+                                                            },
+                                                            "db-template"
+                                                        ]
+                                                    ]
+                                                },
+                                                "try-for-crash: updated-template"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "back-trace",
+                                        "rows": [
+                                            []
+                                        ]
+                                    },
+                                    {
+                                        "type": "box",
+                                        "name": "comments",
+                                        "rows": [
+                                            []
+                                        ]
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                ]
+            }
+        ]
+    ]
+}
