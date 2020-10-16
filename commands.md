@@ -1,5 +1,17 @@
 # Useful Commands
 
+## Using Portacle SBCL from Atom 
+
+```lisp
+;; Inside the portacle repl
+(swank:create-server :port 8099 :dont-close T)
+```
+
+After installing `SLIMA` in Atom, run the above in the portacle repl to start up
+a new swank server, then set the connection port in the Atom SLIMA preferences to
+the port used. After that you can run the `slime:connect` command 
+
+
 ## Infusion
 
 ```javascript
