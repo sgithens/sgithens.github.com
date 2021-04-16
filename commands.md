@@ -1,5 +1,12 @@
 # Useful Commands
 
+## Portacle/Trial/SBCL/Stuff
+
+```lisp
+# Launch the trial workbench from SBCL with a float trap to catch issues on MacOS
+sbcl --eval '(ql:quickload :trial-workbench)' --eval '(float-features:with-float-traps-masked T (workbench:launch))'
+```
+
 ## Using Portacle SBCL from Atom 
 
 ```lisp
