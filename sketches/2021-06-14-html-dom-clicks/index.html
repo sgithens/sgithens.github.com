@@ -1,0 +1,57 @@
+<html>
+    <body id="thebody">
+        <h1>HTML Dom Click types</h1>
+
+        <p>
+            Currently we are working on revising the mouse click magic event names
+            in Boxer. At the moment there is only "mouse-click" and "mouse-double-click".
+            And actually the mouse click is more like mouse down since it will get
+            invoked if you hold the button down for a bit and don't let up. This is a small
+            sketch to take a look at the behavior of the HTML DOM events click, dblclick,
+            mousedown, and mouseup.  Usually when possible I try to map new things closely
+            to the modern browser model as many are familiar with it and I believe it represents
+            a good set of tradeoffs.
+        </p>
+
+        <p>
+            You can open the javascript console and click in this document to view the event order.
+        </p>
+
+        <p>
+            Interestingly, if you double click, the regular click events for each click still get
+            triggered. The result of Double Clicking is: (same in firefox, chrome, and safari)
+            <pre>
+        mousedown           2021-06-14-html-dom-clicks:8:25
+        mouseup             2021-06-14-html-dom-clicks:8:25
+        click               2021-06-14-html-dom-clicks:8:25
+        mousedown           2021-06-14-html-dom-clicks:8:25
+        mouseup             2021-06-14-html-dom-clicks:8:25
+        click               2021-06-14-html-dom-clicks:8:25
+        dblclick            2021-06-14-html-dom-clicks:8:25
+            </pre>
+        </p>
+
+        <script>
+            var logit = function(name) {
+                console.log(name);
+            };
+
+            var body = document.getElementById("thebody");
+            body.addEventListener("click", function () {
+                logit("click");
+            });
+
+            body.addEventListener("dblclick", function () {
+                logit("dblclick");
+            });
+
+            body.addEventListener("mousedown", function () {
+                logit("mousedown");
+            });
+
+            body.addEventListener("mouseup", function () {
+                logit("mouseup");
+            });
+        </script>
+    </body>
+</html>
