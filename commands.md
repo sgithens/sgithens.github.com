@@ -1,5 +1,25 @@
 # Useful Commands
 
+## Apple Signing and Notarizing Stuff
+
+### XCode 12.4 on Catalina
+
+#### Sending for Notorization
+
+```sh
+xcrun altool --notarize-app --password ****** --username 'steve@githens.org' 
+  --file ./current-test-build/boxersunrise-2021-07-12.zip 
+  --primary-bundle-id "boxer.notorize"
+```
+
+#### Checking results with the RequestUUID
+
+```sh
+xcrun altool --notarization-info 432970DF-A2EA-4872-85CA-19FCC68156F8 
+  --password ******* --username 'steve@githens.org'
+```
+
+
 ## Portacle/Trial/SBCL/Stuff
 
 ```lisp
