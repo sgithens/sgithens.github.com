@@ -1,0 +1,66 @@
+<html>
+    <body>
+        <h1>Comparing CL floats at a precision level</h1>
+        <p>
+            Internally, the OpenGL code stores each component of an RGB color
+            as a float, and since they are floats the precision and number of
+            decimals can get wonky. This was a problem when comparing certain
+            colors to change menus in the toolbar, they really only have to be
+            so precise since usually the usable range is 0 - 255. Some useful
+            commentary from #clschool on irc.
+        </p>
+        <div>
+            <pre>
+3:21 PM &lt;sgithens&gt; Hi, I've poked around the hyperspec and a few books but I'm still not sure the 'correct' to compare 2 floats at a certain level of precision. For instance I want the following to return 't :
+3:21 PM &lt;sgithens&gt;  (some-sort-of-equal-that-looks-at-3-decimal-points 0.64705885 0.6470585) ; ie 0.647 and 0.647
+3:21 PM &lt;sgithens&gt; t
+3:22 PM &lt;mfiano&gt; comparing floats is tricky business
+3:22 PM &lt;mfiano&gt; for a robust solution you would want to pass in a relative and absolute tolerance
+3:22 PM &lt;sgithens&gt; I was thinking I should make 2 new numbers that just take the first 3 decimal points, but I realize I'm also not sure the correct way to do that!
+3:23 PM &lt;mfiano&gt; https://realtimecollisiondetection.net/blog/?p=89
+3:23 PM &lt;sgithens&gt; I've even thought of doing probably horrible things like using a format string that just takes the first 3 points and then comparing those string :p
+3:24 PM &lt;White_Flame&gt; same concept in any language, (&lt; 0.001 (abs (- a b)))
+3:24 PM &lt;sgithens&gt; aha!
+3:24 PM &lt;White_Flame&gt; however, yeah that's not explicitly looking at the 3 digits being the same
+3:24 PM &lt;mfiano&gt; No
+3:24 PM &lt;mfiano&gt; That is not good to do
+3:24 PM &lt;mfiano&gt; That is only using the absolute tolerance!
+3:25 PM &lt;White_Flame&gt; well, this was for 3 decimal digits
+3:25 PM &lt;White_Flame&gt; which is a pretty absolute tolerance ;)
+3:25 PM &lt;White_Flame&gt; 0.000000000000003 and 0.000000000000009 should be "the same" under those terms
+3:25 PM &lt;mfiano&gt; It doesn't matter.
+3:26 PM &lt;sgithens&gt; I'm just comparing some RGB color values that have gotten saved differently in saved files.  So, if the two shades of orange are close enough that's really what I'm looking for. It's not for any sort of intense scientific application
+3:26 PM &lt;White_Flame&gt; but, 0.1119 and 0.1120 would pass the predicate, as their delta is within 0.001, but their 1st 3 fractional decimal digits differ
+3:26 PM &lt;mfiano&gt; The absolute tolerance test fails when A and B are large
+3:26 PM &lt;White_Flame&gt; so yes, you do need to convert it into decimals if you want to compare
+3:26 PM &lt;mfiano&gt; The relative test fails when A and B are small
+3:26 PM &lt;mfiano&gt; Combining the two will give you a better test
+3:26 PM &lt;mfiano&gt; I have lisp code for this somewhere...
+3:27 PM &lt;White_Flame&gt; If the float is so large that the .xxx digits are no longer in precision, then = suffices
+3:27 PM &lt;sgithens&gt; I had thought about decimals, but I don't think there is decimal type in the CL standard??
+3:27 PM &lt;mfiano&gt; (defun ~= (x y &key (rel 1d-7) (abs rel)) (&lt; (abs (- x y)) (max abs (* rel (max (abs x) (abs y))))))
+3:27 PM &lt;White_Flame&gt; but, the abs delta check will also work
+3:28 PM &lt;mfiano&gt; there is an ~= function combining abs and rel testing
+3:28 PM &lt;White_Flame&gt; sgithens: multiply by 1000, take the int, compare
+3:28 PM &lt;White_Flame&gt; then you get the equivalent of comparing the decimal digits 3 past the point
+3:29 PM &lt;White_Flame&gt; (= (floor (* a 1000)) (floor (* b 1000)))
+3:29 PM &lt;sgithens&gt; Thanks White_Flame and mfiano ! This will get me through the day, I'll read that link you pasted for continuing education : p
+3:29 PM &lt;sgithens&gt; First time I've posted in this IRC channel, thanks a lot for the help!
+3:30 PM &lt;White_Flame&gt; np.  mfiano's is more correct for general float compares, but yours isn't very general
+3:30 PM &lt;White_Flame&gt; "close enough" would be &lt; 0.001 tolerance, "has the 1st 3 digits the same" would be the float 1000 thing
+3:30 PM &lt;White_Flame&gt; *floor 1000
+3:31 PM &lt;White_Flame&gt; all assuming that your value range is 0.0 - 1.0, as per colors
+3:31 PM &lt;sgithens&gt; yeah, that's correct
+3:33 PM &lt;White_Flame&gt; technically, (floor (* x 256)) would compare what their 0-255 value would be, although that assumes the range is [0.0, 1.0)
+
+4:43 PM &lt;pjb&gt; sgithens:
+    (defun float-equal-to-precision (a b precision)
+    (if (zerop a)
+        (zerop b)
+        (&lt; (abs (/ (- a b) a)) precision)))
+
+    (float-equal-to-precision 0.64705885e10 0.6470585e10 0.001) #| --&gt; t |#
+            </pre>
+        </div>
+    </body>
+</html>
