@@ -1,5 +1,13 @@
 # Useful Commands
 
+### Slightly less worse macOS Big Sur UI
+
+The entire OS still wastes too much space compared to macOS X, but this makes the menu bars at least slightly smaller:
+
+```sh
+defaults write -g NSWindowSupportsAutomaticInlineTitle -bool false
+```
+
 ## Apple Signing and Notarizing Stuff
 
 ### XCode 12.4 on Catalina
