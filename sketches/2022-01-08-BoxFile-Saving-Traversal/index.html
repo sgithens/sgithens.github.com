@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h1>BoxFile Resursive Saving</h1>
+        <em>Do Sub Box Files get saves when the enclosing box is saved?</em>
+
+        <p>In Boxer a box can be marked as a file box, which means that particular
+            box is saved to a file on disk.  Like any other boxer asset, you can have
+            file boxes inside of other boxes.  When you issue a Save command, Boxer
+            will look for the closest file box upwards from the location of the cursor
+            and save that box. However, if you have file boxes inside of that box, though
+            they need to have save commands issued themselves in order to save their
+            contents.
+        </p>
+
+        <!-- controls width="250" -->
+        <video controls width="600">
+
+            <source src="./2022-01-08-BoxerSaveTraversal.mov"
+                    >
+
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <!-- <video controls="controls" width="800" height="600" name="Video Name">
+            <source src="http://www.myserver.com/myvideo.mov">
+          </video> -->
+
+
+    </body>
+</html>
