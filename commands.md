@@ -28,6 +28,20 @@ xcrun altool --notarization-info 432970DF-A2EA-4872-85CA-19FCC68156F8
 ```
 
 
+## Create macOS iso files from the Installer Apps
+
+Using macOS Catalina as an example.
+
+```sh
+sudo hdiutil create -o ~/Desktop/macOScatalina.cdr -size 10000m -layout SPUD -fs HFS+J
+sudo hdiutil attach ~/Desktop/macOScatalina.cdr.dmg -noverify -mountpoint /Volumes/macOScatalina
+sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/macOScatalina --nointeraction
+hdiutil detach /Volumes/Install\ macOS\ Catalina/
+hdiutil convert ~/Desktop/macOScatalina.cdr.dmg -format UDTO -o ~/Desktop/macOScatalina.iso
+mv ~/Desktop/macOScatalina.iso.cdr ~/Desktop/macOScatalina.iso
+rm ~/Desktop/macOScatalina.cdr.dmg
+```
+
 ## Portacle/Trial/SBCL/Stuff
 
 ```lisp
