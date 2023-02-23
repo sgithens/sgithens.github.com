@@ -1,5 +1,11 @@
 # Useful Commands
 
+### Quick common lisp search
+
+```sh
+egrep '\(defstruct |\(defparameter |\(defmacro |\(defvar |\(defmethod |\(defclass |\(defun ' ./src/redisplay/repaint.lisp | sort
+```
+
 ### Slightly less worse macOS Big Sur UI
 
 The entire OS still wastes too much space compared to macOS X, but this makes the menu bars at least slightly smaller:
