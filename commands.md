@@ -1,5 +1,23 @@
 # Useful Commands
 
+### Making a .icns file
+
+```sh
+# Directory has to have a .iconset suffix
+% ls AppIcon.iconset
+Contents.json		icon_16x16.png		icon_256x256@2x.png	icon_512x512.png
+icon_128x128.png	icon_16x16@2x.png	icon_32x32.png		icon_512x512@2x.png
+icon_128x128@2x.png	icon_256x256.png	icon_32x32@2x.png
+
+% iconutil -c icns AppIcon.iconset
+```
+
+### Quick common lisp search
+
+```sh
+egrep '\(defstruct |\(defparameter |\(defmacro |\(defvar |\(defmethod |\(defclass |\(defun ' ./src/redisplay/repaint.lisp | sort
+```
+
 ### Slightly less worse macOS Big Sur UI
 
 The entire OS still wastes too much space compared to macOS X, but this makes the menu bars at least slightly smaller:
@@ -27,6 +45,20 @@ xcrun altool --notarization-info 432970DF-A2EA-4872-85CA-19FCC68156F8
   --password ******* --username 'steve@githens.org'
 ```
 
+
+## Create macOS iso files from the Installer Apps
+
+Using macOS Catalina as an example.
+
+```sh
+sudo hdiutil create -o ~/Desktop/macOScatalina.cdr -size 10000m -layout SPUD -fs HFS+J
+sudo hdiutil attach ~/Desktop/macOScatalina.cdr.dmg -noverify -mountpoint /Volumes/macOScatalina
+sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/macOScatalina --nointeraction
+hdiutil detach /Volumes/Install\ macOS\ Catalina/
+hdiutil convert ~/Desktop/macOScatalina.cdr.dmg -format UDTO -o ~/Desktop/macOScatalina.iso
+mv ~/Desktop/macOScatalina.iso.cdr ~/Desktop/macOScatalina.iso
+rm ~/Desktop/macOScatalina.cdr.dmg
+```
 
 ## Portacle/Trial/SBCL/Stuff
 
