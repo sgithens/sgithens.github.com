@@ -1,5 +1,16 @@
 # Useful Commands
 
+### Finding the dependencies for an asdf system
+
+```lisp
+CL-USER> (asdf:system-depends-on (asdf:find-system :sdl2))
+("alexandria" "cl-autowrap" "cl-plus-c" "cl-ppcre" "trivial-channels"
+ "trivial-features" "cl-glut")
+```
+
+https://asdf.common-lisp.dev/asdf.html#Information-about-system-dependencies-1
+
+
 ### Making a .icns file
 
 ```sh
