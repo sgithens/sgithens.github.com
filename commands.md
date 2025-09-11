@@ -1,5 +1,12 @@
 # Useful Commands
 
+### `file` - Viewing a files encoding type (and other useful bits)
+
+```sh
+> file -I system-index.txt
+system-index.txt: text/plain; charset=us-ascii
+```
+
 ### Finding the dependencies for an asdf system
 
 ```lisp
