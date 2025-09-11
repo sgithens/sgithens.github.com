@@ -1,5 +1,11 @@
 # Useful Commands
 
+### Making sure `asdf` isn't caching anything
+
+```sh
+find ./ -name '*.asd' | xargs -L1 touch
+```
+
 ### `file` - Viewing a files encoding type (and other useful bits)
 
 ```sh
