@@ -1,5 +1,28 @@
 # Useful Commands
 
+### `.lispworks` things you need for unicode
+
+```lisp
+(progn
+  (pushnew :LATIN-1 system:*specific-valid-file-encodings*)
+  (pushnew :utf-8 system:*specific-valid-file-encodings*)
+
+  (lw:set-default-character-element-type 'cl:character))
+```
+
+### Making sure `asdf` isn't caching anything
+
+```sh
+find ./ -name '*.asd' | xargs -L1 touch
+```
+
+### `file` - Viewing a files encoding type (and other useful bits)
+
+```sh
+> file -I system-index.txt
+system-index.txt: text/plain; charset=us-ascii
+```
+
 ### Finding the dependencies for an asdf system
 
 ```lisp
