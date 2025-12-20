@@ -1,5 +1,16 @@
 # Useful Commands
 
+### Build and test ECL locally
+
+```sh
+git clone https://gitlab.com/embeddable-common-lisp/ecl.git ecl
+cd ecl
+./configure --prefix=`pwd`/ecl-test
+make
+make install
+make check
+```
+
 ### `.lispworks` things you need for unicode
 
 ```lisp
