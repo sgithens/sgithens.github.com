@@ -1,5 +1,12 @@
 # Useful Commands
 
+### View dns records
+
+```sh
+dig githens.org +noall +answer -t A
+dig githens.org +noall +answer -t AAAA
+```
+
 ### Build and test ECL locally
 
 ```sh
