@@ -1,5 +1,14 @@
 # Useful Commands
 
+### Running Tuneblocks Impromptu
+
+```sh
+# Download Impromptu from: https://tuneblocks.com/#download
+curl -O https://repo1.maven.org/maven2/xerces/xercesImpl/2.12.2/xercesImpl-2.12.2.jar
+
+java -cp xercesImpl-2.12.2.jar:Imp.jar com.impromptu.ImpApp
+```
+
 ### View dns records
 
 ```sh
