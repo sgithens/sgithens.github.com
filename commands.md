@@ -1,5 +1,10 @@
 # Useful Commands
 
+### Counting specific file lines
+```sh
+find ./Boxer/scripts/ -name '*.gd' | xargs wc -l
+```
+
 ### Running Tuneblocks Impromptu
 
 ```sh
