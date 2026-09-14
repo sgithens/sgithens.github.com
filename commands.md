@@ -1,5 +1,11 @@
 # Useful Commands
 
+### Finding and downloading macOS Installers
+```sh
+softwareupdate --list-full-installers
+softwareupdate --fetch-full-installer --full-installer-version 27.0
+```
+
 ### Counting specific file lines
 ```sh
 find ./Boxer/scripts/ -name '*.gd' | xargs wc -l
