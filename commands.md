@@ -1,5 +1,25 @@
 # Useful Commands
 
+### Finding and downloading macOS Installers
+```sh
+softwareupdate --list-full-installers
+softwareupdate --fetch-full-installer --full-installer-version 27.0
+```
+
+### Counting specific file lines
+```sh
+find ./Boxer/scripts/ -name '*.gd' | xargs wc -l
+```
+
+### Running Tuneblocks Impromptu
+
+```sh
+# Download Impromptu from: https://tuneblocks.com/#download
+curl -O https://repo1.maven.org/maven2/xerces/xercesImpl/2.12.2/xercesImpl-2.12.2.jar
+
+java -cp xercesImpl-2.12.2.jar:Imp.jar com.impromptu.ImpApp
+```
+
 ### View dns records
 
 ```sh
