@@ -2,6 +2,24 @@
 
 This is an archive of Tim's blog since the Typepad service was shutdown.
 
+## 2010-10-19 Tuesday, October 19th
+
+I.33  Maitri karuna mudita upeksanam sukha dukha punya apunya vishayanam bhavanatah citta prasadanam
+
+“By cultivating loving kindness towards those who are happy, compassion for those who suffer, joy for the virtuous, and equanimity for the non virtuous we enter the blessed state of mind.”
+
+In this beautiful sutra Patanjali offers a prescription to help us get our lives moving in a positive direction and overcome some of the negative feelings human beings are prone to—envy, callousness, inferiority, and intolerance.
+
+Yogic philosophy, from the Upanishads, states that we all are a part of Brahman, “The Vastness”—essentially we are all “One”.  Unfortunately, it is all too easy to become disconnected to the “Oneness” and succumb to self-obsession, isolation, and petty head trips that create dysfunction and suffering.
+
+To lift ourselves up, Patanjali offers four great altruistic qualities—loving kindness, compassion, joy, and equanimity.  Practicing these qualities will take us back towards the “Oneness” because they are a clear positive expression of our interconnectedness. This is the Law of Karma in action.
+
+This week we are blessed with three lovely planetary trines—Mercury trine Neptune, Sun trine Neptune, and Mars trine Jupiter. These are all spiritualizing aspects, stimulating the desire for a deeper level of experience and connection, both intellectually and emotionally, and the aspiration to be of service to others. Neptunian aspects help us to expand the sense of self, to embrace the collective unconscious, and experience the Brahman, out of which we all arise.
+
+As an example of compassion in action, the extraordinary Sequoia Neptune will be doing a benefit Kirtan Saturday October 23 at 7pm as a fundraiser to benefit our dear brother Rich McGowan.
+
+As many of you know, Rich has been experiencing some serious health challenges during the past year which have been a drain on his financial resources. Saturday’s kirtan will provide both the opportunity to support Rich and the potential for connecting with a deeper part of yourself by chanting the names of the Divine.  Suggested donation is $20.
+
 ## 2010-09-21 Tuesday, September 21st
 
 On Wednesday September 22 at 8:09pm PDT, the sun passes over the equator on its way south. In the northern hemisphere this marks the Autumnal Equinox, a day when all over the planet we have equal parts of light and darkness. The Sun enters the sign of Libra represented by the scales of balance. The Equinox—Latin for “equal night”—is a day of perfect balance in the external world and is a potent symbol for the balance we seek in yoga.
