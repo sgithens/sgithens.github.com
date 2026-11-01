@@ -2,6 +2,16 @@
 
 This is an archive of Tim's blog since the Typepad service was shutdown.
 
+## Tuesday, September 7th 2010
+
+An interesting combination of energies presents itself in the coming week. Mercury continues its retrograde until Sunday September 12. The final few days of a Mercury retrograde can be the most challenging of all. Time seems to slow down just when we want it to speed up, difficulties with communication frustrate us, our cars and our computers malfunction, and our personal issues loom large on our psychological landscape. Perhaps we are feeling physically exhausted as well and have an overwhelming desire to take a long nap. This urge to retreat is natural at this time. Indeed, the key word during Mercury retrograde is “re “—this is the time to reflect, to refine, to reassess, to reorganize,  to reconnect, and to retrieve things from the past that have proved valuable.
+
+On Wednesday September 8 we have a new moon in Virgo at 3:30am. This is the beginning of a new energy cycle, but Virgo is ruled by Mercury (which as we all know,  is retrograde), so our impulse towards starting new endeavors may be most productively channeled towards completion rather than creation,  towards inner work rather than outer work.
+
+Thursday September 9 is Rosh Hashanah—Jewish New Year.  The next ten days in the Jewish faith are traditionally a time for inner work--reflection,  prayer, and repentance—leading up to Yom Kippur, the Day of Atonement on September 18.  This is a wonderful opportunity to make a realistic assessment of ourselves, to acknowledge where we have fallen short of our ideals, and to forgive ourselves and others for our sins of commission or omission so we can move forward in our lives with a greater sense of perspective and compassion.
+
+As always,  it is a wonderful time to practice yoga and to remember the three critical elements for a successful sadhana—tapah, svadhyaya, and Isvara pranidhanani--purification, reflection, and devotion to God.  The Atonement of Yom Kippur and the At-One-Ment of Yoga are essentially the same thing—the removal of obstacles that prevent us from realizing our connection to the Divine.
+
 ## 2010-08-31 Tuesday August 31st 2010
 
 As the sun makes it’s annual transit of Virgo until the autumnal equinox on September 22nd, we experience an increased sensitivity to matters relating to personal health. Mercury in retrograde until September 12th predisposes us to re-experience old, potentially dysfunctional patterns of body, mind and communication. For the yogi this is a fertile time for practice. Some of our most persistent patterns (samskaras) may be in our face now, asking for recognition at the very least, and perhaps offering the opportunity for resolution and release.
