@@ -2,7 +2,21 @@
 
 This is an archive of Tim's blog since the Typepad service was shutdown.
 
-## Tuesday, September 7th 2010
+## 2010-09-14 Tuesday, September 14 2010
+
+33 years ago when I first started practicing yoga, I began to notice that the same practice done on different days felt very different. The ease or difficulty of practice didn’t seem to necessarily have anything to do with the amount of sleep I had gotten, the purity of my diet, or the state of my love life. I was very curious about this phenomena and like any rational person, I began to investigate astrology. As an ashtanga practitioner, I was already tuned into to the lunar cycle so I wouldn’t mistakenly show up for class on a full or new moon. The waxing and waning the the moon explained some of this fluctuation of energy, but obviously there was something else going on as well.
+
+I purchased an astrological calendar which had a daily listing of all the planetary aspects. Then I had to familiarize myself with all the glyphs (symbols) for the different planets and aspects. I discovered that trines, sextiles and conjunctions were good aspects, and squares and oppositions were not so good. Venus and Jupiter were benefic planets, while Mars and Saturn were malefic ones. What I began to understand is that astrology is an attempt to decipher a symbolic language that is being communicated to us through planetary activity and interaction, and that the macrocosm (the universe) is reflected within the microcosm (the individual).  For example, each of the visible planets in the solar system corresponds to one of the chakras – Venus to the anahata chakra, for example.
+
+Over the years this has become a hobby of mine, checking the daily planetary aspects, observing how I am feeling, noticing the size and quality of my yoga classes and sensing the general vibe of the world at large. I try to stay objective about it all and just notice the subtle and not so subtle energetic trends.
+
+As the planets pass through the different constellations of the Zodiac, their influence shifts. In Vedic astrologythe planets are called “grahas” (graspers). They are thought to grab the energy of the constellation they are transiting and pull it into the Earth’s energy field. Once their energy enters the Earth’s energy field, then the planets can grab us as well.
+
+In the coming week the big planetary aspect is Jupiter conjunct Uranus at 29 degrees Pisces on Saturday, September 18th—Yom Kippur—the Jewish day of Atonement. A conjunction in Vedic astrology is known as a “Yoga”. This particular conjunction combines the expansiveness and optimism of Jupiter with the Uranian desire for freedom and new ways of expression. It occurs in the spiritualizing sign of Pisces, giving us the urge to merge with the Ocean of Being. There is a real desire now to break free of the old paradigm of conditioned thought and behavior, coupled with faith, insight and compassion. The time is ripe for accelerating our own evolutionary process and doing some real good in the world, based on enlightened humanitarianism.
+
+Jupiter and Uranus have been close together for the past four months and will continue to be for the next four, conjuncting again on January 4th, 2011. This is a large window of opportunity for us to make significant progress in our journey of Self-Realization.
+
+## 2010-09-07 Tuesday, September 7th 2010
 
 An interesting combination of energies presents itself in the coming week. Mercury continues its retrograde until Sunday September 12. The final few days of a Mercury retrograde can be the most challenging of all. Time seems to slow down just when we want it to speed up, difficulties with communication frustrate us, our cars and our computers malfunction, and our personal issues loom large on our psychological landscape. Perhaps we are feeling physically exhausted as well and have an overwhelming desire to take a long nap. This urge to retreat is natural at this time. Indeed, the key word during Mercury retrograde is “re “—this is the time to reflect, to refine, to reassess, to reorganize,  to reconnect, and to retrieve things from the past that have proved valuable.
 
