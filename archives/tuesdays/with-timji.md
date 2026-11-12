@@ -2,6 +2,20 @@
 
 This is an archive of Tim's blog since the Typepad service was shutdown.
 
+## 2010-10-26 Tuesday, October 26th
+
+This week we get to celebrate everyone’s favorite pagan holiday—Halloween. Halloween has its origins in the ancient Celtic festival called Samhain, literally “Summer’s End”. Samhain marked the end of the harvest season and the beginning of the descent into Winter—a transitional time, or cusp, between the forces of light and darkness. The belief was that the sharp line of demarcation between this world and the spirit world becomes more nebulous at this time and there is more interaction and communication between the two realms—spirits are roaming the earth and the veils between past, present and future may be lifted in prophecy and divination.
+
+The Samhain Festival, from October 31st until November 2nd, was considered a time of “no time”, when structures were abolished and chaos would reign. People did crazy things—men dressed as women and women dressed as men, farmers’ gates were unhinged and left in ditches, peoples’ horses were moved secretly to different fields and children would knock on neighbors’ doors demanding food and treats (sound familiar?). Beyond the apparent lunacy was a deeper meaning. The Celtic priests, the Druids, knew that those days had a special quality to them. The veil between this world and the world of the ancestors was drawn aside, and, for those who were prepared, journeys could be made safely to the “other side” to contact the spirits of the departed as sources of inspiration and guidance.
+
+This was also the Celtic New Year, celebrated with bonfires and feasting. One of the traditions was to make a list of one’s negative qualities and cast it into the fire as a gesture of purification and renewal.
+
+The Samhain Festival occurs during the Sun’s annual transit of Scorpio from October 23rd until November 22nd. One of the symbols for Scorpio is the Phoenix, the mythical bird that is consumed by the solar fire and rises again out of its own ashes.
+
+This week holds the potential for transformation and regeneration as long as we are willing to enter the fire of “tapas” and loosen our grip a bit on the rigidity of our personality structure, our social role and even our sense of the solidity of the world around us. It is the time to be more porous, spontaneous and receptive to influence from “the other side”.
+
+Happy Halloween!
+
 ## 2010-10-19 Tuesday, October 19th
 
 I.33  Maitri karuna mudita upeksanam sukha dukha punya apunya vishayanam bhavanatah citta prasadanam
