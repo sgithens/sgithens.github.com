@@ -210,6 +210,8 @@ about://inspect
 ```python
 #python2
 python -m SimpleHTTPServer 5000
+#python3
+python3 -m http.server
 ```
 
 ## Getting all the dev releases and other info from an npm module
