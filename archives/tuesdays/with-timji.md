@@ -2,6 +2,20 @@
 
 This is an archive of Tim's blog since the Typepad service was shutdown.
 
+## 2010-11-02 Tuesday, November 2nd
+
+November  3 through 7 marks the celebration of one of the most important Indian  holidays—Divali, or Deepavali, in Sanskrit—the Festival of Lights.   Deepa means a lamp and avali means a row, so Deepavali literally means  “a row of lamps.”  Traditionally rows of small clay oil lamps are lit in  houses to signify the triumph of Light over Darkness.
+
+Divali  celebrates the return of Rama and Sita to Ayodhya after their 14 years  of exile and Rama’s defeat of the demon king Ravana.  Rama and Sita are  believed to be human incarnations of Vishnu and Lakshmi.  During their  14 years of exile in the forest, Rama and Sita endure many trials and  tribulations, most significantly Sita’s abduction by Ravana.
+
+With  the assistance of his devoted servant Hanuman, Rama is able to locate  Sita and rescue her after killing Ravana.  In every human incarnation  there is darkness to overcome.  Divali symbolizes the triumph of good  over evil.  Rama and sita represent Divine consciousness—the pure,  infinite, eternal light within us known as the Atman.  Ravana symbolizes  the darkness of arrogance, greed, and lust that obscures this inner  light.  Hanuman personifies the perfect sadhaka—the ideal blend of the  body, mind, and heart.  He embodies the three vital essences of Prana,  Tejas, and Ojas which provide energy, intelligence, strength, valor,  endurance, and devotion.  With Hanuman’s help we can defeat the powers  of darkness and reawaken the light within us.
+
+The most  important of the Divali rituals is the Lakshmi Puja which is celebrated  on the new moon in Ashwin (November 5th this year).  This is the Lunar  New Year and marks the end of the harvest season.  Farmers give thanks  for the bounty of the Earth and pray for a good harvest in the year to  come.  Businesses dependent upon the agrarian cycle, and many that are  not, close their accounts on this day.  Lakshmi symbolizes prosperity  and her blessings are invoked for a good year ahead.
+
+Houses  are scrubbed clean (Lakshmi likes cleanliness), new clothes are  purchased, gifts are exchanged, sweets are offered, and lamps are lit to  welcome Lakshmi.  Amidst the chanting of Vedic hymns, a blaze of light  descends as the golden footed Lakshmi descends to Earth in all her  celestial glory.  The living luminescence of Universal Motherhood  envelopes the entire world in that blessed moment and the sublime light  of knowledge and devotion  dawns upon humanity.  It is believed that on  this day Lakshmi walks the Earth and showers her blessings on humanity  for abundance and prosperity.
+
+Joseph Cambell once said  that one thing that robs life of its potential richness is the lack of  ritual.  He went on to say that there is no inherent meaning in any  ritual, that whatever meaning a ritual has is the meaning we bring to  it.  India is a country rich in rituals, a place where a lot of emphasis  is placed on honoring the invisible energies that keep the Universe  running smoothly.  It is easy to curse the darkness.  It takes a little  more energy to light a lamp.  The choice is ours.
+
 ## 2010-10-26 Tuesday, October 26th
 
 This week we get to celebrate everyone’s favorite pagan holiday—Halloween. Halloween has its origins in the ancient Celtic festival called Samhain, literally “Summer’s End”. Samhain marked the end of the harvest season and the beginning of the descent into Winter—a transitional time, or cusp, between the forces of light and darkness. The belief was that the sharp line of demarcation between this world and the spirit world becomes more nebulous at this time and there is more interaction and communication between the two realms—spirits are roaming the earth and the veils between past, present and future may be lifted in prophecy and divination.
